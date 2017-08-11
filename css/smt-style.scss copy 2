@@ -1,0 +1,1380 @@
+@import "normalize";
+
+$mred:#a9263f;
+$darkred:#812839;
+$black:#333;
+$gray:#666;
+$lightgray:#999;
+$lightred:#DF3033;
+
+$bdrcolor:#ddd;
+
+
+$font-stack:Tahoma,"Microsoft YaHei","微软雅黑","黑体","宋体",sans-serif;
+
+
+
+
+
+
+
+ul
+{
+  list-style: none;
+  
+  li
+  {
+    text-align: left;
+  }
+}
+
+a:link,a:visited
+{
+  text-decoration: none;
+  //color: $mred;
+}
+a:hover
+{
+  color: $lightred;
+}
+
+.a-btn
+{
+  border:1px solid $lightred;
+  font-size:12px;
+  color: $lightred;
+  padding:5px 20px;
+}
+.a-btn:hover
+{
+  background: $lightred;
+  color: #fff;
+  
+}
+.a-btn-fill
+{
+  //display: inline-block;
+  font-size:12px;
+  padding:10px 20px;
+  background: $lightred;
+  color: #fff !important;
+}
+.a-btn-fill:hover
+{
+  background: $mred;
+}
+
+.a-hover-fill
+{
+  font-size:12px;
+  padding:5px;
+}
+.a-hover-fill:hover
+{
+  background: $lightred;
+  color: #fff !important;
+}
+
+.a-btn-big
+{
+  font-size:14px;
+}
+
+.a-red
+{
+  color: $lightred;
+  font-size:12px;
+  margin: 0 10px;
+
+
+  .iconfont
+  {
+    font-size:16px;
+  }
+}
+.a-red:hover
+{
+  color: $mred;
+}
+button
+{
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  background-repeat:no-repeat;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  outline: none;
+}
+
+input
+{
+  outline: none;
+}
+input:focus
+{
+  outline: none;
+}
+
+input[type="text"]
+{
+  display: block;
+  outline: none;
+  border:1px solid #ddd;
+  height: 28px;
+  text-indent: 5px;
+  box-shadow: 0 0 0 #000;
+}
+input[type="checkbox"]
+{
+  display: inline-block;
+  margin:0;
+  padding:0;
+
+}
+
+input[type="textbox"]:focus
+{
+  border: 1px solid $lightred;
+  outline: none;
+}
+
+
+  select
+  {
+    outline: none;
+    background: #fff;
+    display: inline-block;
+    margin-left:5px;
+    margin-right:25px;
+    border-radius: 0;
+    border-color: #ddd;
+
+  }
+  select:focus
+  {
+    outline: none;
+  }
+
+
+
+.danger
+{
+  color: red;
+}
+.success
+{
+  color:green;
+}
+.purple
+{
+  color:purple;
+}
+.orange
+{
+  color:orange;
+}
+.money
+{
+  color: red;
+  font-weight:bold;
+}
+
+.align-right
+{
+  text-align: right;
+}
+.align-left
+{
+  text-align: left;
+}
+
+
+.th-checkbox
+{
+  width:20px;
+}
+.wid-50percent
+{
+  width:50%;
+}
+.wid-50px
+{
+  width:50px;
+}
+.wid-100px
+{
+  width: 100px;
+}
+.wid-150px
+{
+  width:150px;
+}
+.wid-200px
+{
+  width:200px;
+}
+body,h1,h2,h3,h4,h5,div,p,span,input,button,a,section,footer,header,nav,ul,li,table,th,tr,td
+{
+  font-family:$font-stack !important;
+  margin:0;
+  padding:0;
+}
+
+h1,h2,h3,h4,h5,p
+{
+  color: $gray;
+  font-weight:normal;
+}
+h5
+{
+  font-size:14px;
+}
+h4
+{
+  font-size:16px;
+  color: $gray;
+}
+h3
+{
+  font-size:18px;
+}
+h2
+{
+  font-size:24px;
+}
+h1
+{
+  font-size:30px;
+}
+p
+{
+  font-size:12px;
+}
+
+body
+{
+  position: relative;
+  background: #fff;
+}
+
+
+
+.leftside
+{
+  position: absolute;
+  top:0;
+  left:0;
+  width:120px;
+  background: $mred;
+  color: #fff;
+  margin:0;
+  padding:0;
+  z-index:1000;
+
+  .iconfont
+  {
+    font-size:48px;
+  }
+}
+
+//table-base
+
+table
+{
+  width:100%;
+  border:0;
+  margin:0;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th
+  {
+    background: #eee;
+    border-bottom:1px solid #ddd;
+    text-align: center;
+    font-size:14px;
+    color: $gray;
+    font-weight:normal;
+    padding:15px 10px;
+  }
+  td
+  {
+    text-align: center;
+    font-size:12px;
+    color: $gray;
+    border-bottom:1px solid #ddd;
+    padding: 15px 10px;
+  }
+
+  tr:hover
+  {
+    background: #eee;
+  }
+
+  tr td:first-child
+  {
+    text-align: left;
+    padding-left:10px;
+  }
+  tr td:last-child
+  {
+    text-align: right;
+    padding-right:20px;
+  }
+  tr th:first-child
+  {
+    text-align: left;
+    padding-left:10px;
+  }
+  tr th:last-child
+  {
+    text-align: right;
+    padding-right:20px;
+  }
+  p
+  {
+    text-align: left;
+    float: left;
+  }
+  img
+  {
+    float: left;
+    width:100px;
+  }
+  div
+  {
+    float: left;
+  }
+
+}
+
+.table-mini td
+{
+  padding: 10px;
+}
+
+table.align-top td
+{
+  vertical-align: top;
+}
+
+.product-list-table
+{
+
+  img
+  {
+    width:100px;
+    float: left;
+  }
+  
+  a
+  {
+    color: $lightred;
+    padding:2px;
+  }
+  a:hover
+  {
+    background: $lightred;
+    color: #fff;
+  }
+  
+  tr th:first-child+th
+  {
+    text-align: left;
+  }
+
+}
+
+.product-attr-table
+{
+  img
+  {
+    width:50px;
+  }
+  
+  tr th:first-child+th
+  {
+    text-align: left;
+  }
+}
+
+.leftside i
+{
+  display: block;
+  text-align: center;
+}
+.menubtn
+{
+  display: block;
+  text-align: center;
+  font-size:14px;
+  color: rgba(255,255,255,.9);
+  //margin-top:20px;
+  padding:15px;
+}
+.menubtn:hover
+{
+  background: #fff;
+  color: $mred;
+}
+
+.leftside img
+{
+  margin:20px auto 40px auto;
+  display: block;
+}
+
+.leftside img:hover
+{
+  cursor: pointer;
+}
+
+.sub-menu
+{
+  position: absolute;
+  width:150px;
+  background: #fff;
+  left:120px;
+  z-index:1000;
+  top:100px;
+  border:1px solid $mred;
+  border-left:none;
+  border-top:5px solid $mred;
+  display: none;
+}
+
+
+.sub-menu ul
+{
+  list-style:none;
+}
+
+
+.sub-menu ul li a:link, .sub-menu ul li a:visited
+{
+  display: block;
+  height:40px;
+  line-height:40px;
+  color: $gray;
+  font-size:12px;
+  padding-left:20px;
+  border-bottom:1px solid #ddd;
+}
+.sub-menu ul li a:hover
+{
+  cursor: pointer;
+  background: $mred;
+  color: #fff;
+}
+.main
+{
+  display: block;
+  padding-left:120px;
+  background: #f0f0f0;
+}
+iframe
+{
+  width:100%;
+  height:100%;
+}
+
+.topNav
+{
+  background: #f0f0f0;
+}
+.topbar
+{
+  padding:0;
+  margin:0;
+  padding-left:20px;
+  height:50px;
+  color: $gray;
+  background: #fff;
+
+  p
+  {
+    font-size:18px;
+    color: $gray;
+    line-height:50px;
+    display: inline-block;
+
+  }
+  ul
+  {
+    list-style: none;
+    float: right;
+  }
+  li
+  {
+    float: left;
+  }
+  a:link,a:visited
+  {
+    font-size:12px;
+    line-height:50px;
+    margin-right:20px;
+    color: $gray;
+  }
+  a:hover
+  {
+    color: $lightred;
+  }
+  .iconfont
+  {
+    font-size:10px;
+  }
+  .cart
+  {
+    color: $lightred;
+    font-size:14px;
+  }
+  span
+  {
+    color: $lightred;
+  }
+}
+
+
+.nav
+{
+  height:70px;
+}
+
+
+.navlistWrap
+{
+  margin-top:20px;
+  height:30px;
+  overflow: hidden;
+  width:500px;
+  display: inline-block;
+}
+
+.navlist
+{
+  display: inline-block;
+  height:30px;
+  list-style: none;
+}
+.navlist li
+{
+  position: relative;
+  height:100%;
+  display: inline-block;
+  float: left;
+  line-height:30px;
+  font-size:12px;
+  background: #ddd;
+  padding:0 0 0 25px;
+  text-align: center;
+  color: $lightgray;
+}
+.navlist li:first-child
+{
+  padding-left:10px;
+}
+
+.navlist li:before
+{
+  position: absolute;
+  content: '';
+  width:0;
+  height:0;
+  border-left:15px solid #ddd;
+  border-top:25px solid transparent;
+  border-bottom:25px solid transparent;
+  display: block;
+  z-index:3;
+  top:-10px;
+  right:-15px;
+}
+
+.navlist li:after
+{
+  position: absolute;
+  content: '';
+  width:0;
+  height:0;
+  border-left:15px solid #f0f0f0;
+  border-top:25px solid transparent;
+  border-bottom:25px solid transparent;
+  display: block;
+  z-index:2;
+  top:-10px;
+  right:-18px;
+}
+
+.navlist li i
+{
+  font-size:20px;
+  line-height:30px;
+}
+.navActive
+{
+  background: $lightred !important;
+  color: #fff !important;
+}
+.navActive:before
+{
+  border-left-color: $lightred !important;
+}
+.navlist li:hover
+{
+  background: $lightred;
+  color: #fff;
+  cursor: pointer;
+}
+.navlist li:hover:before
+{
+  border-left-color: $lightred;
+}
+
+.search-group
+{
+  margin-top:-50px;
+  display: inline-block;
+  float: right;
+  margin-right:20px;
+  height:30px;
+  outline:none;
+
+  a
+  {
+    font-size:12px;
+    color: $gray;
+    display: inline-block;
+    float: right;
+    //border:1px solid red;
+    line-height:14px;
+    margin-left:5px;
+  }
+  a:hover
+  {
+    color: $lightred;
+  }
+}
+.search-group input
+{
+  width:300px;
+  outline:none;
+  display: inline-block;
+  float: right;
+  margin:0;
+  height:28px;
+  font-size:14px;
+  line-height:30px;
+  color: $gray;
+}
+.search-group input:focus
+{
+  border:1px solid $lightred
+}
+.search-group i
+{
+  font-size:18px;
+  line-height:28px;
+  background: $lightred;
+  width:30px;
+  height:30px;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  float: right;
+}
+
+.iframeWrap
+{
+  display: block;
+  margin-left:20px;
+  background: #fff;
+}
+
+
+.panel
+{
+  display: inline-block;
+  float: left;
+  border:1px solid #ddd;
+  height:300px;
+  margin-left:20px;
+  margin-top:20px;
+
+}
+.panel-header
+{
+  height:40px;
+  width:100%;
+  line-height:40px;
+  color: $lightgray;
+  font-size:14px;
+  font-weight:bold;
+  background: #eee;
+  text-indent: 10px;
+  border-bottom:1px solid #ddd;
+}
+.panel-inner
+{
+  display: block;
+  margin-left:10px;
+  margin-right:10px;
+
+}
+
+
+
+
+
+.a-group .mbtn-fill
+{
+  width:20%;
+}
+.mbtn-fill:hover
+{
+  background: $mred;
+}
+.a-group
+{
+  text-align: center;
+  margin-top:80px;
+
+}
+
+.pageHeader
+{
+  display: block;
+  height:30px;
+  padding:20px;
+  font-size:12px;
+  color: $gray;
+  //border:1px solid red;
+
+
+}
+
+.headerleft
+{
+  display: inline-block;
+  height: 100%;
+  float: left;
+  line-height:30px;
+  //border:1px solid red;
+
+}
+.headerright
+{
+  display: inline-block;
+  height:100%;
+  float: right;
+  line-height:30px;
+}
+
+
+.tableWrap
+{
+  padding:0 20px;
+}
+
+
+
+
+
+.product-info
+{
+  margin-left:10px;
+
+  ul
+  {
+    list-style: none;
+  }
+  li
+  {
+    text-align: left;
+  }
+}
+
+
+
+.pagefooter
+{
+  display: block;
+  padding:20px 20px 20px 10px;
+
+  margin-bottom:50px;
+  height:30px;
+  font-size:12px;
+
+  input[type="checkbox"]
+  {
+    display: inline-block;
+  }
+}
+
+.footerleft
+{
+  position: relative;
+  float: left;
+  height:30px;
+  text-align: left;
+  display: inline-block;
+}
+
+.footerright
+{
+  float: right;
+  height:30px;
+  line-height:20px;
+  text-align: right;
+  display: inline-block;
+
+}
+
+.pager
+{
+  float: right;
+  a
+  {
+    width:24px;
+    height:24px;
+    display: inline-block;
+    padding:0;
+    text-align: center;
+    line-height:24px;
+  }
+  .iconfont
+  {
+    color: $lightred !important;
+    font-size:12px !important;
+  }
+  a:hover .iconfont
+  {
+    color: #fff;
+  }
+  input
+  {
+    display: inline-block;
+    width:40px;
+    padding-left:10px;
+    height:24px;
+  }
+
+
+
+}
+
+.product-baseinfo-table
+{
+  width:100%;
+
+  tr td:first-child
+  {
+    text-align: right;
+    width:15%;
+  }
+  tr td:last-child
+  {
+    width:85%;
+  }
+  tr:hover
+  {
+    background: none;
+  }
+  td
+  {
+    border-bottom:none;
+    padding-right:0 !important;
+  }
+  td input
+  {
+    width:100%;
+  }
+}
+
+.star
+{
+  color: red;
+}
+
+
+.product-label
+{
+  height:20px;
+  padding:0 10px;
+  border:1px solid #ddd;
+  float: left;
+  font-size:12px;
+  line-height:20px;
+  margin-right:10px;
+}
+table.set-product td
+{
+  border:none;
+}
+
+table.set-product td input
+{
+  width:95%;
+  height:50px;
+}
+table.set-product tr:hover
+{
+  background: none;
+}
+table.set-product .iconfont
+{
+  font-size:24px;
+}
+
+
+.set-price-table
+{
+  td input
+  {
+    margin: 0 auto;
+  }
+  th:last-child
+  {
+    text-align: center;
+  }
+  input
+  {
+    width:50px;
+  }
+}
+
+.section-header
+{
+  padding:30px 20px;
+}
+
+.product-imgs
+{
+  padding-left:20px;
+}
+
+.attachment
+{
+  margin-left:20px;
+  width:50%;
+  height:60px;
+  line-height:60px;
+  font-size:12px;
+  background: #eee;
+  text-align: right;
+  text-indent: 10px;
+}
+.attachment span
+{
+  margin-right:20px;
+}
+.attachment a
+{
+  float: left;
+}
+
+.market-price
+{
+  margin-left:20px;
+  width:50%;
+  font-size:20px;
+  line-height:50px;
+  height:50px;
+  background: #eee;
+  text-indent:10px;
+  margin-bottom:20px;
+}
+.red-text
+{
+  color: $lightred;
+}
+.market-price input
+{
+  display: inline-block;
+  margin-left:10px;
+  text-indent:10px;
+  //margin-top:5px;
+}
+.market-price span
+{
+  display: inline-block;
+}
+
+
+
+.m-btn
+{
+  cursor: pointer;
+  padding:0 30px;
+  height:40px;
+  font-size:14px;
+  line-height:40px;
+  margin-right:20px;
+}
+.m-btn-red
+{
+  background: $lightred;
+  color: #fff;
+}
+.m-btn-gray
+{
+  background: #ddd;
+  color: $gray;
+}
+.m-btn-red:hover
+{
+  background: $mred;
+}
+.m-btn-gray:hover
+{
+  background: #ccc;
+
+}
+.btn-group
+{
+  height:100px;
+  margin-bottom:50px;
+  margin-top:50px;
+  padding-left:20px;
+
+}
+
+.old-price
+{
+  color: $lightgray;
+  text-decoration: line-through;
+}
+.price
+{
+  font-weight:bold;
+  color: red;
+}
+
+.total-money
+{
+  font-size:14px;
+  font-weight:bold;
+  color:red;
+}
+
+.sale
+{
+  padding:3px;
+  font-size:10px;
+  color: #fff;
+  background: red;
+}
+.company-name
+{
+  font-weight:bold;
+}
+
+.cart-table
+{
+  margin-bottom:50px;
+
+
+  th
+  {
+    background: none;
+    border-bottom:0;
+  }
+  tr th:first-child
+  {
+    padding-right:0;
+    width:10px;
+  }
+  tr th:first-child+th
+  {
+    width:30px;
+    text-align: left;
+    padding-left:0;
+  }
+  tr th:first-child+th+th
+  {
+    text-align: left;
+    width:100px;
+  }
+  tr th:first-child+th+th+th
+  {
+    text-align: left;
+  }
+
+  tr td:first-child+td
+  {
+    padding-left:0;
+  }
+  tr td:first-child+td+td
+  {
+    text-align: left;
+  }
+
+  td
+  {
+    vertical-align: top;
+    border-bottom:none;
+  }
+  .tr-gap
+  {
+    height:20px;
+  }
+
+  .cart-check
+  {
+    background: #eee;
+  }
+
+  .cart-check td
+  {
+    font-size:14px;
+  }
+  .cart-check a
+  {
+    margin-right:20px;
+  }
+  .order-btn-td
+  {
+    padding:0 !important;
+    background: none;
+    text-align: right;
+  }
+  .order-btn-td a:link,.order-btn-td a:visited
+  {
+    width:100px;
+    height:100% !important;
+    display: inline-block;
+    font-size:18px;
+    color: #fff;
+    text-align: center;
+    background: $lightred;
+    line-height:57px;
+    margin-right:0;
+
+  }
+  .order-btn-td a:hover
+  {
+    background: $mred;
+  }
+  .total-num
+  {
+    font-size:14px;
+    color: $lightred;
+  }
+
+  input[type="text"]
+  {
+    width:40px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+  }
+  input[type="text"]:focus
+  {
+    border-color:#ddd;
+  }
+
+  .input-btn
+  {
+    display: inline-block;
+    //background: #ddd;
+    width:20px;
+    height: 30px !important;
+    //vertical-align: middle;
+
+    line-height:30px;
+  }
+
+  .tr-hover-none td
+  {
+    padding-top:30px;
+    
+  }
+  .tr-hover-none:hover
+  {
+    background: none !important;
+  }
+
+}
+
+.tr-border
+{
+  border:1px solid #ddd;
+}
+
+
+
+
+.sell-list-table
+{
+  input[type="checkbox"]
+  {
+    display: block;
+  }
+
+  td
+  {
+    vertical-align: top;
+    ul
+    {
+      li
+      {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    img
+    {
+      width:100%;
+    }
+  }
+  th
+  {
+    ul
+    {
+      li
+      {
+        display: inline-block;
+        text-align: left;
+      }
+    }
+  }
+
+  tr
+  {
+    th
+    {
+      border-top:1px solid $bdrcolor;
+    }
+
+    th:first-child+th
+    {
+      text-align: left;
+    }
+
+  }
+
+  th:first-child
+  {
+    border-left:1px solid #ddd;
+  }
+  th:last-child
+  {
+    border-right:1px solid $bdrcolor;
+    padding: 2px 20px 2px 5px;
+  }
+  tr:last-child
+  {
+    border-bottom:1px solid #ddd;
+  }
+  tr td:first-child
+  {
+    border-left:1px solid #ddd;
+  }
+  tr td:last-child
+  {
+    border-right:1px solid #ddd;
+  }
+
+  //注意顺序先后
+  tr:first-child td
+  {
+    border:none;
+  }
+  .td-combine
+  {
+    border-left:1px solid #ddd;
+    border-bottom:none;
+  }
+
+  .tr-hide
+  {
+    visibility: hidden;
+  }
+
+
+  tr td:first-child
+  {
+    width: 20px;
+    padding-right:0;
+  }
+  tr td:first-child+td
+  {
+    text-align: left;
+    width:100px;
+  }
+  tr td:first-child+td+td
+  {
+    text-align: left;
+    width:24%;
+
+  }
+  tr td:first-child+td+td+td
+  {
+    width:12%;
+  }
+  tr td:first-child+td+td+td+td
+  {
+    width:10%;
+  }
+  tr td:first-child+td+td+td+td+td+td
+  {
+    width:12%;
+  }
+
+
+
+
+  .iconfont
+  {
+    font-size:32px;
+    color:$gray;
+  }
+}
+
+.order-done
+{
+  color: red;
+}
+
+.footer-table
+{
+  border:none;
+
+  th
+  {
+    background: none;
+    border:none !important;
+  }
+
+  td
+  {
+    border:none;
+  }
+  tr
+  {
+    border:none;
+  }
+  tr:hover
+  {
+    background: none;
+  }
+  a:link,a:visited
+  {
+    color: $lightred;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

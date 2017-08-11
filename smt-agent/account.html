@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理商-资金账户</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>xxxxx代理商</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">资金管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">资金账户</a></li>
+                <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+                <!--<li><a href="">明细</a></li>-->
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href="javascript:toggleAdvPanel()" class="advSearchBtn" id="advBtn"><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+
+    <div class="adv-search" id="advPanel">
+        <div class="adv-search-title">
+            高级搜索
+        </div>
+
+        <div class="adv-search-inner">
+            <table>
+                <tr>
+                    <td>订单号</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>客户名称</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>收货信息</td>
+                    <td colspan="3"><input type="text" placeholder="收货人/电话/客户名称"></td>
+                </tr>
+                <tr>
+                    <td>订单类型</td>
+                    <td colspan="3"><input type="radio" name="order" id="orderA"> <label for="orderA">订货单</label>
+                        <input type="radio" name="order" id="orderB"> <label for="orderB">退货单</label></td>
+                </tr>
+                <tr>
+                    <td>订单状态</td>
+                    <td colspan="3">
+                        <input type="checkbox" id="statusA"> <label for="statusA">全部</label>
+                        <input type="checkbox" id="statusB"> <label for="statusB">待订单审核</label>
+                        <input type="checkbox" id="statusC"> <label for="statusC">待财务审核</label>
+                        <input type="checkbox" id="statusD"> <label for="statusD">待出库审核</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3">
+                        <input type="checkbox" id="statusE"> <label for="statusE">待发货确认</label>
+                        <input type="checkbox" id="statusF"> <label for="statusF">待收货确认</label>
+                        <input type="checkbox" id="statusG"> <label for="statusG">已完成</label>
+                        <input type="checkbox" id="statusH"> <label for="statusH">已作废</label></td>
+                </tr>
+                <tr>
+                    <td>订单标签</td>
+                    <td colspan="3">
+                        <input type="radio" name="sale" id="saleA"> <label for="saleA">不限</label>
+                        <input type="radio" name="sale" id="saleB"> <label for="saleB">特价</label>
+                        <input type="radio" name="sale" id="saleC"> <label for="saleC">非特价</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>下单时间</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>商品</td>
+                    <td colspan="3"><input type="text" placeholder="请输入商品名称/编码/关键字/条形码"></td>
+                </tr>
+                <tr>
+                    <td>客户归属区域</td>
+                    <td colspan="3">
+                        <input type="text" list="region">
+                        <datalist id="region">
+                            <option value="全部地区"></option>
+                            <option value="华东地区"></option>
+                            <option value="华南地区"></option>
+                            <option value="华北地区"></option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>客户级别</td>
+                    <td colspan="3">
+                        <input type="text" list="clients">
+                        <datalist id="clients">
+                            <option value="全部级别"></option>
+                            <option value="一级代理"></option>
+                            <option value="二级代理"></option>
+                            <option value="三级代理"></option>
+                            <option value="代签代理"></option>
+
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>订单付款状态</td>
+                    <td colspan="3">
+                        <input type="checkbox" id="payA"> <label for="payA">全部</label>
+                        <input type="checkbox" id="payB"> <label for="payB">未付款</label>
+                        <input type="checkbox" id="payC"> <label for="payC">付款待审核</label>
+                        <input type="checkbox" id="payD"> <label for="payD">部分付款</label>
+                        <input type="checkbox" id="payE"> <label for="payE">已付款</label></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="btns-div">
+            <a href="" class="a-btn-fill">搜索</a><a href="" class="a-btn-fill btn-gray">取消</a>
+        </div>
+    </div>
+</div>
+
+<!--content start-->
+<div class="page-inner">
+
+    <h5 style="display:inline-block;">请选择厂家:</h5>
+    <div class="selectWrap"><select name="" id="" style="font-size:14px;padding:0 5px;">
+        <option value="厂家A">汉瑞木业有限公司</option>
+        <option value="厂家B">厂家B</option>
+        <option value="厂家C">厂家C</option>
+    </select></div>
+</div>
+
+
+
+<div class="tableWrap">
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>账户</th>
+            <th>余额</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>预付款账户</td>
+            <td>￥8888.88</td>
+            <td><a href="recharge.html" target="myiframe">充值</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>返点账户</td>
+            <td>￥0.00</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="text-align:right;">总计</td>
+            <td class="money">￥888.88</td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<div class="page-inner">
+    <div class="input-inline-div">
+        <input type="text" placeholder="支付流水号/订单号"> <span>选择时间</span>
+        <input type="text"> 至 <input type="text">
+        最近: <a href="">1个月</a><a href="">3个月</a><a href="">半年</a> <a href="">更多</a>
+
+        <a href="" class="a-btn-fill push-right">查询</a>
+    </div>
+    <!--<hr>-->
+</div>
+
+<div class="tableWrap">
+    <table>
+        <tr>
+            <th>序号</th>
+            <th>支付流水号</th>
+            <th>日期</th>
+            <th>资金账户</th>
+            <th>摘要</th>
+            <th>充值</th>
+            <th>扣款</th>
+            <th>账户余额</th>
+            <th>操作</th>
+        </tr>
+
+        <tr class="receipt-tr-on" id="tr-1">
+            <td>1</td>
+            <td>934823823727</td>
+            <td>2016-10-18 
+            14:22</td>
+            <td>预付款账户</td>
+            <td>订单付款</td>
+            <td></td>
+            <td>￥880.00</td>
+            <td>￥7650.00</td>
+            <td><a href="javascript:void(0);" id="btn-1">详情</a>
+                </td>
+        </tr>
+
+        <tr id="list-1">
+
+            <td colspan="9" class="receipt-detail-td" id="receiptTd-1">
+                <div class="receipt-detail-div " id="receiptDiv-1">
+                    <h5>详情</h5>
+                    <br>
+                    <p><span>日期:2016-10-18</span><span>支付方式:转账</span>
+                        <span>订单号:123123123</span>
+                    </p>
+
+                    <p><span>备注:无</span></p>
+
+                    <p><span>流水号:123421301234</span> <span>操作人:xxx</span><span>审核人: xxx</span></p>
+
+                </div>
+            </td>
+        </tr>
+
+        <tr class="" id="tr-2">
+            <td>2</td>
+            <td>934823823727</td>
+            <td>2016-10-18
+                14:22</td>
+            <td>预付款账户</td>
+            <td>订单付款</td>
+            <td></td>
+            <td>￥880.00</td>
+            <td>￥7650.00</td>
+            <td><a href="javascript:void(0);">详情</a>
+            </td>
+        </tr>
+
+       
+
+        <tr class="" id="tr-3">
+            <td>3</td>
+            <td>934823823727</td>
+            <td>2016-10-18
+                14:22</td>
+            <td>预付款账户</td>
+            <td>订单付款</td>
+            <td>￥1000.00</td>
+            <td></td>
+            <td>￥7650.00</td>
+            <td><a href="javascript:void(0);">详情</a>
+            </td>
+        </tr>
+
+       
+
+
+    </table>
+
+
+</div>
+
+
+<div class="page-inner">
+    <div class="pagefooter">
+        <div class="footerleft">
+            共计8条
+        </div>
+        <div class="footerright">
+            <div class="pager">
+                共计
+                <span class="total">20</span>条 每页显示
+
+                <select name="itemNum">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+
+
+                条 第 <input type="text" placeholder="1">页
+                共 <span class="totalPage">2</span>页
+                <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="btns-div">
+    <a href="javascript:history.back(-1);" target="myiframe" class="a-btn-fill btn-gray">返回</a>
+</div>
+
+
+<script>
+    //高级搜索框显示与隐藏
+
+
+    function toggleAdvPanel() {
+
+        var advBtn = document.getElementById('advBtn');
+        var advPanel = document.getElementById('advPanel');
+
+        console.log(advPanel.style.display);
+
+        console.log('toggle...');
+        if (advPanel.style.display === 'none') {
+            advPanel.style.display = 'block';
+        } else {
+            advPanel.style.display = 'none';
+        }
+
+    }
+
+
+    //    显示隐藏收款详情
+
+//    var receiptDetail=true;
+//
+//    function toggleReceiptDetail() {
+//        console.log('toggle receipt detail');
+//
+//        if(receiptDetail)
+//        {
+//            document.getElementById('receiptTr-1').classList.add('receipt-tr-off');
+//            document.getElementById('receiptTd-1').classList.add('receipt-detail-td-hide');
+//            document.getElementById('receiptDiv-1').classList.add('receipt-detail-div-hide');
+//            receiptDetail=false;
+//        }else
+//        {
+//            document.getElementById('receiptTr-1').classList.remove('receipt-tr-off');
+//            document.getElementById('receiptTd-1').classList.remove('receipt-detail-td-hide');
+//            document.getElementById('receiptDiv-1').classList.remove('receipt-detail-div-hide');
+//            receiptDetail=true;
+//        }
+//
+//
+//    }
+
+
+
+    $('#btn-1').click(function () {
+        console.log('ddd');
+        if($('#tr-1').hasClass('tr-active'))
+        {
+            $('#tr-1').removeClass('tr-active');
+            $('#tr-1').prev().removeClass('bdr-btm');
+            $('#list-1').hide();
+
+        }else
+        {
+            $('#tr-1').addClass('tr-active');
+            $('#tr-1').prev().addClass('bdr-btm');
+            $('#list-1').show();
+        }
+    })
+
+</script>
+
+
+<!--<script src="../js/smt-subpage.js"></script>-->
+</body>
+</html>

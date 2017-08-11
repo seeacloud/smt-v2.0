@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addOrder</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">订货管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">订货单列表</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">增加订货单</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+
+<!--content start-->
+<div class="pageHeader">
+
+        <div class="headerleft">
+            客户名称: <div class="selectWrap">
+            <select name="" id="">
+                <option value=""></option>
+                <option value="">汉瑞木业有限公司</option>
+                <option value="">熊猫木业有限公司</option>
+            </select>
+        </div>
+        </div>
+    <div class="popup client-popup" id="clientPopup">
+
+        <div class="popup-bg">
+            <div class="popup-panel">
+                <div class="popup-panel-header">
+                    <h5>选择客户</h5>
+                    <i class="iconfont close-btn">&#xe615;</i>
+                </div>
+                <table class="client-list-table">
+
+                    <tr>
+                        <td colspan="2">筛选: <select name="itemNum">
+                            <option value="10">全部级别</option>
+                            <option value="20">一级代理</option>
+                            <option value="50">二级代理</option>
+                            <option value="100">三级代理</option>
+                        </select></td>
+                        <td colspan="2"><div class="search-group">
+                            <i class="iconfont">&#xe60c;</i>
+                            <input type="text" placeholder="请输入客户名称">
+                        </div>
+                            </td>
+                    </tr>
+                <tr>
+                    <th></th>
+                    <th>客户名称</th>
+                    <th>地区</th>
+                    <th>级别</th>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="clientName"></td>
+                    <td>汉瑞木业有限公司</td>
+                    <td>湖南省 长沙市</td>
+                    <td>一级代理</td>
+                </tr>
+
+
+                <tr>
+                    <td><input type="radio" name="clientName"></td>
+                    <td>汉瑞木业有限公司</td>
+                    <td>湖南省 长沙市</td>
+                    <td>一级代理</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="clientName"></td>
+                    <td>汉瑞木业有限公司</td>
+                    <td>湖南省 长沙市</td>
+                    <td>一级代理</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="clientName"></td>
+                    <td>汉瑞木业有限公司</td>
+                    <td>湖南省 长沙市</td>
+                    <td>一级代理</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="clientName"></td>
+                    <td>汉瑞木业有限公司</td>
+                    <td>湖南省 长沙市</td>
+                    <td>二级代理</td>
+                </tr>
+                <tr>
+                    <td colspan="4"><div class="pager">
+                        共计
+                        <span class="total">20</span>条 每页显示
+
+                        <select name="itemNum">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+
+
+                        条 第 <input type="text" placeholder="1">页
+                        共 <span class="totalPage">2</span>页
+                        <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                        <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+                    </div></td>
+                </tr>
+                    <tr class="tr-no-border">
+                        <td></td>
+                    </tr>
+                <tr class="tr-no-border">
+                    <td colspan="4" class="align-center" ><a href="" class="a-btn-fill">确认</a>
+                        <a href="" class="a-btn-fill btn-gray">取消</a></td>
+                </tr>
+            </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="tableWrap">
+    <table class="add-order-table">
+        <tr>
+            <th>序号</th>
+            <th></th>
+            <th>产品</th>
+            <th>数量</th>
+            <th>单位</th>
+            <th>单价(元)</th>
+            <th class="sum">小计(元)</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div></td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td>139.00</td>
+            <td class="sum">139.00</td>
+            <td><a href="">添加</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div></td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td>139.00</td>
+            <td>139.00</td>
+            <td><a href="">添加</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div></td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td>139.00</td>
+            <td>139.00</td>
+            <td><a href="">添加</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div></td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td>139.00</td>
+            <td>139.00</td>
+            <td><a href="">添加</a></td>
+        </tr>
+
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="align-right">总计</td>
+            <td class="font-bold">￥12999</td>
+            <td></td>
+        </tr>
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="align-right">应付总计</td>
+            <td><input type="text" placeholder="￥" class="money align-center"></td>
+            <td></td>
+        </tr>
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="font-bold">叁万捌仟伍佰元整</td>
+            <td></td>
+        </tr>
+    </table>
+
+    
+    <div class="diliver-info">
+
+        <table class="no-border-bg-hover">
+            <tr>
+                <td style="width: 80px;"> <span class="font-bold">送货信息</span></td>
+                <td colspan="5"></td>
+            </tr>
+            <tr class=" ">
+                <td><span class="star">*</span>收货人姓名</td>
+                <td class="align-right"><input type="text"></td>
+                <td class="align-right"><span class="star">*</span>收货人电话</td>
+                <td><input type="text"></td>
+                <td>送货日期</td>
+                <td class="td-date"><input type="text"> <i class="iconfont">&#xe616;</i></td>
+            </tr>
+            <tr class=" ">
+                <td><span class="star">*</span>详细地址</td>
+                <td colspan="5"><input type="text"></td>
+            </tr>
+            <tr>
+                <td> <span class="font-bold">附件信息</span></td>
+                <td><a href="">+附件</a></td>
+                <td colspan="4"><span>(附件最大20M，支持格式：PDF、Word、Excel、JPG、PNG、RAR、ZIP）</span></td>
+            </tr>
+            <tr>
+                <td> <span class="font-bold">备注</span></td>
+                <td colspan="5"><input type="text"></td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+
+    <div class="btn-group-wrap">
+        <a href="" class="a-btn-fill">保存</a>
+        <a href="" class="a-btn-fill btn-gray">取消</a>
+    </div>
+
+
+
+
+
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

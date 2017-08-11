@@ -1,0 +1,157 @@
+$smtRed: #a9263f;
+@import "normalize";
+$font-stack: Tahoma, "Microsoft YaHei", "微软雅黑", "黑体", "宋体", sans-serif;
+body, h1, h2, h3, h4, h5, div, p, span, input, button, a, section, footer, header, nav, ul, li, table, th, tr, td, label, textarea {
+  font-family: $font-stack !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-con {
+  position: relative;
+  min-width: 800px;
+  padding-left: 100px;
+  display: block;
+  background: #dddddd;
+  font-size: 0;
+  line-height: 0;
+}
+
+.logo-con {
+  padding: 20px 0 0 0;
+  margin-bottom: 20px;
+}
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $smtRed;
+  width: 100px;
+  height: 100%;
+  img {
+    width: 100%;
+  }
+
+}
+
+.m-item {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  a {
+    display: block;
+    color: inherit;
+  }
+  i.iconfont {
+    font-size: 32px;
+    color: #ffffff;
+    line-height: 1.1em;
+  }
+}
+
+.m-title {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.m-item:hover {
+  //background: rgba(255,255,255,1);
+  background: #ffffff;
+  .a-main {
+    color: $smtRed;
+    i, span {
+      color: inherit;
+    }
+  }
+}
+
+.m-item-active
+{
+  background: #ffffff;
+  .a-main {
+    color: $smtRed;
+    i, span {
+      color: inherit;
+    }
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .m-item {
+    i.iconfont {
+      font-size: 24px;
+    }
+  }
+}
+
+.sub-menu {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 100px;
+  font-size: 14px;
+  background: #ffffff;
+  padding: 20px 0;
+  background: #ffffff;
+  border-left: 1px solid #ddd;
+  -webkit-box-shadow: 2px 0 5px #dddddd;
+  -moz-box-shadow: 2px 0 5px #dddddd;
+  box-shadow: 2px 0 5px #dddddd;
+  .sub-group {
+    overflow: hidden;
+    width: 150px;
+    display: inline-block;
+    float: left;
+    border-right: 1px solid #eeeeee;
+    .a-con {
+      a {
+        font-size: 12px;
+        line-height: 3em;
+      }
+
+    }
+    .a-con:first-child {
+      a {
+        color: $smtRed;
+        font-weight: bold;
+      }
+    }
+    a:hover {
+      color: $smtRed;
+    }
+  }
+  .sub-group:last-child {
+    border: none;
+  }
+
+  //.sub-group:nth-child(2)
+  //{
+  //  left:101px;
+  //}
+  //.sub-group:nth-child(3)
+  //{
+  //  left:202px;
+  //}
+  //.sub-group:nth-child(4)
+  //{
+  //  left: 303px;
+  //}
+}
+
+.a-sub {
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.align-btm
+{
+  top:auto;
+  bottom: 0;
+}

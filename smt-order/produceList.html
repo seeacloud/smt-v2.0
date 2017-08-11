@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生产单列表</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+
+</head>
+<body>
+
+
+
+<!--作废弹出框-->
+<div id="modal-align-center" style="display: none;">
+
+    <div class="modal-header">生产单状态更新 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p><span style="font-size: 14px;">将生产状态更新为:</span>
+
+            <span class="selectWrap">
+                <select name="" id="">
+                    <option value="">已下单</option>
+                    <option value="">生产中</option>
+                    <option value="">已完成</option>
+                </select>
+            </span>
+        </p>
+        
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display: none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">生产管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">生产单列表</a></li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="pageHeader">
+    <div class="headerleft">
+
+        筛选: <span class="span-btn">最近一周</span><span class="span-btn">最近一月</span>
+    </div>
+    <div class="headerright"><a href="addProduce.html" target="myiframe" class="a-btn-fill a-btn-margin-right-0">增加</a></div>
+</div>
+
+<div class="tableWrap">
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th><input type="checkbox"></th>
+            <th>订货单号</th>
+            <th>生产单号</th>
+            <th class="align-left">产品信息</th>
+            <th>状态</th>
+            <th>订货人</th>
+            <th>订货时间</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><input type="checkbox"></td>
+            <td>242342343432</td>
+            <td>hr1212产品04#单</td>
+            <td><img src="../img/futi.jpg" alt="">
+                <div>
+                    <p>产品名称: 中式实木扶梯</p>
+                    <p>材质: 橡木 </p>
+                    <p>颜色: 棕色</p>
+                </div>
+            </td>
+
+            <td class="td-status" ><a href="" id="btn-status-1">油漆生产中 <i class="iconfont">&#xe8da;</i></a>
+                <div class="p-status " id="status-1">
+                    <p class="current">油漆生产中 <br><span>2016-10-18 14:22</span></p><br>
+                    <p>木工生产中 <br><span>2016-10-18 15:33</span></p><br>
+                    <p>已下单 <br><span>2016-10-18 12:13</span></p>
+                </div>
+            </td>
+            <td>李XX</td>
+            <td>2016-10-18 11:08</td>
+            <td><a href="reviewProduce.html" target="myiframe">生产详情</a><br><a href="#modal-align-center" rel="modal:open">状态更新</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><input type="checkbox"></td>
+            <td>242342343432</td>
+            <td>hr1212产品04#单</td>
+            <td><img src="../img/futi.jpg" alt="">
+                <div>
+                    <p>产品名称: 中式实木扶梯</p>
+                    <p>材质: 橡木 </p>
+                    <p>颜色: 棕色</p>
+                </div>
+            </td>
+
+            <td>已报单</td>
+            <td>李XX</td>
+            <td>2016-10-18 11:08</td>
+            <td><a href="reviewProduce.html" target="myiframe">生产详情</a><br><a href="#modal-align-center" rel="modal:open">状态更新</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><input type="checkbox"></td>
+            <td>242342343432</td>
+            <td>hr1212产品04#单</td>
+            <td><img src="../img/futi.jpg" alt="">
+                <div>
+                    <p>产品名称: 中式实木扶梯</p>
+                    <p>材质: 橡木 </p>
+                    <p>颜色: 棕色</p>
+                </div>
+            </td>
+
+            <td>已报单</td>
+            <td>李XX</td>
+            <td>2016-10-18 11:08</td>
+            <td><a href="reviewProduce.html" target="myiframe">生产详情</a><br><a href="#modal-align-center" rel="modal:open">状态更新</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><input type="checkbox"></td>
+            <td>242342343432</td>
+            <td>hr1212产品04#单</td>
+            <td><img src="../img/futi.jpg" alt="">
+                <div>
+                    <p>产品名称: 中式实木扶梯</p>
+                    <p>材质: 橡木 </p>
+                    <p>颜色: 棕色</p>
+                </div>
+            </td>
+
+            <td>已报单</td>
+            <td>李XX</td>
+            <td>2016-10-18 11:08</td>
+            <td><a href="reviewProduce.html" target="myiframe">生产详情</a><br>
+                <a href="#modal-align-center" rel="modal:open">状态更新</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><input type="checkbox"></td>
+            <td>242342343432</td>
+            <td>hr1212产品04#单</td>
+            <td><img src="../img/futi.jpg" alt="">
+                <div>
+                    <p>产品名称: 中式实木扶梯</p>
+                    <p>材质: 橡木 </p>
+                    <p>颜色: 棕色</p>
+                </div>
+            </td>
+
+            <td>已报单</td>
+            <td>李XX</td>
+            <td>2016-10-18 11:08</td>
+            <td><a href="reviewProduce.html" target="myiframe">生产详情</a><br><a href="#modal-align-center" rel="modal:open">状态更新</a></td>
+        </tr>
+
+
+    </table>
+</div>
+
+<div class="page-inner"><div class="pagefooter">
+    <div class="footerleft">
+        <!--<input type="checkbox">-->
+        <!--<a href="" class="a-red">批量审核</a>-->
+    </div>
+    <div class="footerright">
+        <div class="pager">
+            共计
+            <span class="total">20</span>条 每页显示
+
+            <select name="itemNum">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+
+
+            条 第 <input type="text" placeholder="1">页
+            共 <span class="totalPage">2</span>页
+            <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+            <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+        </div>
+    </div>
+</div></div>
+
+
+
+
+
+
+
+<script>
+    var makeInvalidBtns=document.querySelectorAll('.changeStatus');
+    for(var i=0;i<makeInvalidBtns.length;i++)
+    {
+        var btn=makeInvalidBtns[i];
+        btn.addEventListener('click',function () {
+            var pageCover=document.createElement('div');
+            pageCover.className='page-cover';
+            var panel=document.createElement('div');
+            panel.innerHTML="<div class=\'popup-panel-header\'>生产状态更新 <i class=\"iconfont btn-close\">&#xe615;</i></div>"+
+                    "<p>订单 <span>2342342311234 的最新状态为:</span></p>"+
+                    "<select><option value =\"volvo\">已下单</option><option value =\"saab\">生产中</option><option value=\"opel\">已发货</option>"+
+                    "<option value=\"audi\">已收货</option></select>"+
+                    "<div class='btns-div'><a class=\'a-btn-fill \'> 确定</a><a class=\'a-btn-fill btn-gray\'>取消</a></div>"
+            panel.className='popup-panel';
+            var stage=document.querySelector('body');
+            stage.appendChild(pageCover);
+            stage.appendChild(panel);
+            var btnClose=document.querySelector('.btn-close');
+            btnClose.addEventListener('click',function () {
+                console.log('btn close');
+
+                stage.removeChild(pageCover);
+                stage.removeChild(panel);
+            });
+        })
+    }
+
+
+    var pageroot=document.querySelector('html');
+    console.log('page root :',parent.window);
+
+    var radioAry=document.querySelectorAll('input[type="radio"]');
+    console.log('radio are:',radioAry);
+
+    for(var i=0;i<radioAry.length;i++)
+    {
+        radioAry[i].onclick=function () {
+            console.log(this.value);
+            if(this.value=='listView')
+            {
+                console.log('iframe is:',parent.window.document.getElementById('iframe'));
+                parent.window.document.getElementById('iframe').src='sellList-list-view.html';
+            }
+
+            if(this.value=='productView')
+            {
+                console.log('iframe is:',parent.window.document.getElementById('iframe'));
+                parent.window.document.getElementById('iframe').src='sellList.html';
+            }
+
+        }
+    }
+
+
+
+//    生产单状态弹出层
+    var isPanel=false;
+    var sBtn=document.getElementById('btn-status-1');
+    var sPanel=document.getElementById('status-1');
+
+    sBtn.onmouseover=function () {
+//        console.log(sPanel);
+        if(!isPanel)
+        {
+            sPanel.classList.add('p-status-show');
+            isPanel=true;
+        }else
+        {
+            sPanel.classList.remove('p-status-show');
+            isPanel=false;
+        }
+    }
+
+    sPanel.onmouseout=function () {
+        var e=event || window.event;
+
+        if(e.target.tagName=="DIV")
+        {
+            e.target.classList.remove("p-status-show");
+            isPanel=false;
+            console.log("target is:", e.target);
+        }
+
+//        console.log("mouse out:",e.target);
+
+    }
+
+</script>
+
+</body>
+</html>

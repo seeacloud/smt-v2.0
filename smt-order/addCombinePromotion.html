@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增组合促销</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/supplier.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+
+</head>
+<body>
+
+<!--弹出框-->
+<div id="delete" style="display: none;width:300px;">
+
+    <div class="modal-header">确认删除
+        <div><i class="iconfont">&#xe615;</i></div>
+    </div>
+    <div class="modal-inner">
+        <p>确认删除该成品采购订单 ？</p>
+    </div>
+
+    <div class="btns-div">
+        <a href="" rel="modal:close" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">产品促销</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">产品促销</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">新增组合促销</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner" id="app">
+
+    <h5 class="font-bold">促销信息</h5>
+    <br>
+
+    <table class="table-normal table-add-promo">
+        <tr>
+            <th>序号</th>
+            <th class="operation"></th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>产品规格</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>+-</td>
+            <td colspan="2"><input type="text" placeholder="调用产品选择控件"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3">[说明] 组合促销最多支持40个商品，最少不低于2个商品。多单位商品按数量组合促销时，以最小单位计算件数。</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="info-item">
+        <span class="info-item-title with-star">促销时间</span> <input type="text" placeholder="调用时间选择控件">
+    </div>
+    <div class="info-item">
+        <span class="info-item-title">促销类型</span>
+        <input type="radio" id="t-type-amount" value="typeAmount" v-model="promoType" name="p-type" checked> <label
+            for="t-type-amount">按数量</label>
+        <input type="radio" id="t-type-money" value="typeMoney" v-model="promoType" name="p-type"> <label
+            for="t-type-money">按金额</label>
+    </div>
+
+
+    <div class="info-item">
+        <span class="info-item-title">阶梯促销</span> <input type="checkbox" @click="toggleLadder">启用
+    </div>
+
+    <!--按数量促销-->
+    <div class="info-item" id="type-amount" v-if="promoType=='typeAmount'">
+        <span class="info-item-title with-star">促销规则</span>
+        <div class="promo-rules">
+            <input type="radio" id="rule-1" name="rule-amount" v-model="ruleNum" value="rule-1"><label
+                for="rule-1">买赠</label>
+
+            <div v-if="ruleNum=='rule-1'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">购买数量每满 <input type="text"/>个, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个
+                    </div>
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">购买数量满 <input type="text"/>个, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个
+                    </div>
+
+                    <div class="rule-detail">
+                        购买数量满 <input type="text"/>个, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个 <i class="iconfont">&#xe614;</i>
+                    </div>
+
+                    <div class="rule-detail">
+                        购买数量满 <input type="text"/>个, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个 <i class="iconfont">&#xe614;</i>
+                    </div>
+                    <span class="add-section">
+                        +添加区间
+                    </span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="promo-rules">
+            <input type="radio" id="rule-2" name="rule-amount" v-model="ruleNum" value="rule-2"><label
+                for="rule-2">直降</label>
+
+            <div v-if="ruleNum=='rule-2'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">购买数量每满 <input type="text"/>个, 促销订货价统一降至 <input type="text"/>元</div>
+
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">购买数量满 <input type="text"/>个, 促销订货价统一降至 <input type="text"/>元</div>
+                    <span class="add-section">
+                +添加区间
+            </span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="promo-rules">
+            <input type="radio" id="rule-3" name="rule-amount" v-model="ruleNum" value="rule-3"><label
+                for="rule-3">打折</label>
+            <span class="comment-text">（订货价=原订货价X促销折扣）</span>
+
+            <div v-if="ruleNum=='rule-3'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">购买数量每满 <input type="text"/>个, 在原订货价基础上再打折 <input type="text"/>%</div>
+
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">购买数量满 <input type="text"/>个, 在原订货价基础上再打折 <input type="text"/>%</div>
+                    <span class="add-section">
+                +添加区间
+            </span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="promo-rules">
+            <p class="red-text">购买金额不能为空</p>
+
+        </div>
+    </div>
+
+
+    <!--按金额促销-->
+
+    <div class="info-item" id="type-money" v-if="promoType=='typeMoney'">
+        <span class="info-item-title with-star">促销规则</span>
+        <div class="promo-rules">
+            <input type="radio" id="rule-a" name="rule-money" value="rule-a" v-model="ruleNum2">
+            <label for="rule-a">满赠</label>
+
+            <div v-if="ruleNum2=='rule-a'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">订单金额每满 <input type="text"/>元, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个
+                    </div>
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">订单金额满 <input type="text"/>元, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个
+                    </div>
+
+                    <div class="rule-detail">
+                        订单金额满 <input type="text"/>元, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个 <i class="iconfont">&#xe614;</i>
+                    </div>
+
+                    <div class="rule-detail">
+                        订单金额满 <input type="text"/>元, 获赠 <input type="text" placeholder="调用产品选择控件">
+                        <input type="text">个 <i class="iconfont">&#xe614;</i>
+                    </div>
+
+
+                    <span class="add-section">
+                +添加区间
+            </span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="promo-rules">
+            <input type="radio" id="rule-b" name="rule-money" value="rule-b" v-model="ruleNum2"><label for="rule-b">满减</label>
+
+            <div v-if="ruleNum2=='rule-b'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">订单金额每满 <input type="text"/>元, 立减 <input type="text"/>元</div>
+
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">订单金额满 <input type="text"/>元, 立减 <input type="text"/>元</div>
+                    <span class="add-section">
+                +添加区间
+            </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="promo-rules">
+            <input type="radio" id="rule-c" name="rule-money" value="rule-c" v-model="ruleNum2"><label for="rule-c">满折</label>
+
+            <div v-if="ruleNum2=='rule-c'">
+                <div v-if="!isLadder">
+                    <div class="rule-detail">订单金额me每满 <input type="text"/>元, 打折
+                        <iut type="text"/>
+                        %
+                    </div>
+
+                </div>
+                <div v-if="isLadder">
+                    <div class="rule-detail">订单金额满 <input type="text"/>元, 打折 <input type="text"/>%</div>
+                    <span class="add-section">
+                +添加区间
+            </span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="promo-rules">
+            <p class="red-text">购买金额不能为空</p>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="page-inner">
+    <div class="btns-div"><a class="a-btn-fill">保存</a>
+        <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">取消</a></div>
+</div>
+
+<script src="../js/vue.min.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isLadder: false,
+            ruleNum: 'rule-1',
+            ruleNum2: 'rule-a',
+            promoType: 'typeAmount'
+        },
+        methods: {
+            toggleLadder: function () {
+                this.isLadder = !this.isLadder
+            }
+        }
+    })
+</script>
+</body>
+</html>

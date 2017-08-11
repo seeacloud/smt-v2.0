@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退单详情</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display: none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">订货管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">退货单列表</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">退单详情</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="pageHeader padding-bottom-0">
+    <div class="headerleft"><h5 class="font-bold">退单详情</h5></div>
+    <div class="headerright">
+    </div>
+</div>
+
+
+
+<div class="tableWrap">
+
+    <table class="selllist-detail-table table-align-top table-small-img">
+        <tr>
+            <td colspan="8">
+                <div>
+                    <h5><span>客户:刘XX </span> <span> 退货单号:</span> <span>1223421348</span>
+                        <span class="red-text">【退单完成】</span></h5>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>序号</th>
+            <th>产品名称</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>单价</th>
+            <th>金额小计</th>
+            <th>备注</th>
+
+        </tr>
+
+        <tr id="tr-product-1">
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""><span class="">美国进口白橡木抽屉</span> <br>木色 商品编码: 11828172</td>
+            <td>套</td>
+            <td>2</td>
+            <td >￥1200</td>
+            <td >￥2400</td><td></td>
+
+        </tr>
+
+
+
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td>退货数量</td>
+            <td>2</td>
+            <td>合计</td>
+            <td>￥7200</td>
+            <td></td>
+        </tr>
+        <tr class="">
+            <td></td>
+            <td></td>
+            <td>申请退款金额</td>
+            <td>￥148.00</td>
+            <td>批准退款金额</td>
+            <td class="money">￥ 148.00</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td colspan="8">
+                <div>
+                    <p>【退货信息】联系人: 王xx 联系电话: 186 xxxx xxxx 送货日期:2016-10-18 </p>
+                    <p>【退货地址】湖南省 长沙市 岳麓区 xxxx xxxxx xxxxx</p>
+                    <p>【物流单号】顺丰快递 1122 2121 8822</p>
+                    <p>【附件信息】xxxx</p>
+                    <p>【备注信息】暂无</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+
+
+<div class="page-inner">
+
+
+
+    <div class="btns-div">
+        <a href="javascript:;" onClick="javascript:history.back(-1);" target="myiframe" class="a-btn-fill btn-gray">返回</a>
+
+    </div>
+</div>
+
+
+<script>
+    $('#list-btn-1').click(function () {
+        if($('#tr-product-1').hasClass('tr-active'))
+        {
+            $('#tr-product-1').removeClass('tr-active');
+            $('#tr-product-1').prev().removeClass('bdr-btm');
+            $('#material-list-1').hide();
+
+        }else
+        {
+            $('#tr-product-1').addClass('tr-active');
+            $('#tr-product-1').prev().addClass('bdr-btm');
+            $('#material-list-1').show();
+        }
+    })
+</script>
+
+<!--<script src="js/smt-subpage.js"></script>-->
+</body>
+</html>

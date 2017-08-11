@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款记录</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <link rel="stylesheet" href="../css/pay-record.css"/>
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+    <link rel="stylesheet" href="../css/smt-service.css"/>
+</head>
+<body>
+
+
+<div class="modal account-modal" id="modal1" style="display: none;">
+
+    <div class="modal-header">选择收款账户
+        <div><i class="iconfont">&#xe615;</i></div>
+    </div>
+
+    <div class="modal-inner">
+        <table>
+            <tr>
+                <th>账户名称</th>
+                <th>开户行</th>
+                <th>开户账号</th>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+
+        </table>
+
+        <div class="pagefooter">
+            <div class="pager">
+                共计
+                <span class="total">20</span>条 每页显示
+
+                <select name="itemNum">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+
+
+                条 第 <input type="text" placeholder="1">页
+                共 <span class="totalPage">2</span>页
+                <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a>
+            </li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">设置</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">山木通服务</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">付款记录</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner" style="padding-left:300px;position: relative;">
+
+    <div class="ul-wrap">
+        <ul class="ul-nav">
+            <li class="service-li"><a href="buySMT.html" target="_self">服务订购</a></li>
+            <li class="service-li"><a href="payRecord.html" target="_self">付款记录</a></li>
+            <li class="service-li"><a href="invoice.html" target="_self">申请发票</a></li>
+            <li class="service-li"><a href="invoiceRecord.html" target="_self">发票记录</a></li>
+        </ul>
+    </div>
+
+    <table class="pay-record-table">
+        <tr>
+            <th>序号</th>
+            <th>订单号</th>
+            <th>客户名称</th>
+            <th>支付方式</th>
+            <th>续费年限</th>
+            <th>订单内容</th>
+            <th>下单时间</th>
+            <th>金额</th>
+            <th>支付状态</th>
+            <th>备注</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>SMT-4323453</td>
+            <td>汉瑞木业</td>
+            <td>微信支付</td>
+            <td>2</td>
+            <td>山木通厂家端</td>
+            <td>2016-11-22</td>
+            <td>￥58888.00</td>
+            <td>已经付款</td>
+            <td></td>
+        </tr>
+
+
+    </table>
+
+
+
+</div>
+
+<div class="page-inner">
+    <div class="pagefooter">
+
+        <div class="footerright">
+            <div class="pager">
+                共计
+                <span class="total">20</span>条 每页显示
+
+                <select name="itemNum">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+
+
+                条 第 <input type="text" placeholder="1">页
+                共 <span class="totalPage">2</span>页
+                <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $(function () {
+        $('.service-li:eq(1) a').addClass('service-on');
+    });
+    $(function () {
+        var onlineBtn = $('#online-btn');
+        var offlineBtn = $('#offline-btn');
+
+        onlineBtn.on('click', function () {
+            $('#online-panel').show();
+            $('#offline-panel').hide();
+
+            onlineBtn.addClass('pay-tab-active');
+            offlineBtn.removeClass('pay-tab-active');
+
+
+        });
+
+        offlineBtn.on('click', function () {
+
+            $('#online-panel').hide();
+            $('#offline-panel').show();
+
+            onlineBtn.removeClass('pay-tab-active');
+            offlineBtn.addClass('pay-tab-active');
+
+        });
+
+        var weixinBtn = $('#weixinBtn');
+        var aliBtn = $('#alipayBtn');
+
+        weixinBtn.on('click', function () {
+            weixinBtn.addClass('pay-style-active');
+            aliBtn.removeClass('pay-style-active');
+
+        });
+
+        aliBtn.on('click', function () {
+            weixinBtn.removeClass('pay-style-active');
+            aliBtn.addClass('pay-style-active');
+
+        });
+
+    });
+</script>
+
+
+<!--<script src="js/smt-subpage.js"></script>-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

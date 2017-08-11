@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厂家-通知-通知详情</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>戴树文 <span class="agent-level">[一级代理]</span> | <span class="font-gray">云销售平台</span></p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+            <!--<li><a href="#feedback" rel="modal:open">反馈</a></li>-->
+            <li>hr003<a href="" style="margin-left:5px;">[退出]</a></li>
+            <li><a href="notificationList.html" target="myiframe"><i class="iconfont" style="color:green;">&#xe61a;</i>消息<span>5</span></a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车<span>22</span></a></li>
+            <li><a href=""><i class="iconfont" style="color:deepskyblue;">&#xe6a3;</i>帮助</a></li>
+            <li id="setting-btn"><a href=""><i class="iconfont" style="color:orange;">&#xe6ae;</i>设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="companyInfo.html" target="myiframe">公司信息</a></li>
+                <li><a href="receivingInfo.html" target="myiframe">收货信息</a></li>
+                <li><a href="log.html" target="myiframe">操作日志</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <!--<li><a href="">通知</a></li>-->
+                <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+                <li><a href="">通知列表</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">通知详情</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href="javascript:toggleAdvPanel()" class="advSearchBtn" id="advBtn"><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+
+    <div class="adv-search" id="advPanel">
+        <div class="adv-search-title">
+            高级搜索
+        </div>
+
+        <div class="adv-search-inner"><table>
+            <tr>
+                <td>订单号</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>客户名称</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>收货信息</td>
+                <td colspan="3"><input type="text" placeholder="收货人/电话/客户名称"></td>
+            </tr>
+            <tr>
+                <td>订单类型</td>
+                <td colspan="3"><input type="radio" name="order" id="orderA"> <label for="orderA">订货单</label>
+                    <input type="radio" name="order" id="orderB"> <label for="orderB">退货单</label></td>
+            </tr>
+            <tr>
+                <td>订单状态</td>
+                <td colspan="3">
+                    <input type="checkbox" id="statusA"> <label for="statusA">全部</label>
+                    <input type="checkbox" id="statusB"> <label for="statusB">待订单审核</label>
+                    <input type="checkbox" id="statusC"> <label for="statusC">待财务审核</label>
+                    <input type="checkbox" id="statusD"> <label for="statusD">待出库审核</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <input type="checkbox" id="statusE"> <label for="statusE">待发货确认</label>
+                    <input type="checkbox" id="statusF"> <label for="statusF">待收货确认</label>
+                    <input type="checkbox" id="statusG"> <label for="statusG">已完成</label>
+                    <input type="checkbox" id="statusH"> <label for="statusH">已作废</label> </td>
+            </tr>
+            <tr>
+                <td>订单标签</td>
+                <td colspan="3">
+                    <input type="radio" name="sale" id="saleA"> <label for="saleA">不限</label>
+                    <input type="radio" name="sale" id="saleB"> <label for="saleB">特价</label>
+                    <input type="radio" name="sale" id="saleC"> <label for="saleC">非特价</label>
+                </td>
+            </tr>
+            <tr>
+                <td>下单时间</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>商品</td>
+                <td colspan="3"><input type="text" placeholder="请输入商品名称/编码/关键字/条形码"></td>
+            </tr>
+            <tr>
+                <td>客户归属区域</td>
+                <td colspan="3">
+                    <input  type="text" list="region">
+                    <datalist  id="region">
+                        <option value="全部地区"></option>
+                        <option value="华东地区"></option>
+                        <option value="华南地区"></option>
+                        <option value="华北地区"></option>
+                    </datalist>
+                </td>
+            </tr>
+
+            <tr>
+                <td>客户级别</td>
+                <td colspan="3">
+                    <input  type="text" list="clients">
+                    <datalist  id="clients">
+                        <option value="全部级别"></option>
+                        <option value="一级代理"></option>
+                        <option value="二级代理"></option>
+                        <option value="三级代理"></option>
+                        <option value="代签代理"></option>
+
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>订单付款状态</td>
+                <td colspan="3">
+                    <input type="checkbox" id="payA"> <label for="payA">全部</label>
+                    <input type="checkbox" id="payB"> <label for="payB">未付款</label>
+                    <input type="checkbox" id="payC"> <label for="payC">付款待审核</label>
+                    <input type="checkbox" id="payD"> <label for="payD">部分付款</label>
+                    <input type="checkbox" id="payE"> <label for="payE">已付款</label></td>
+            </tr>
+
+        </table>
+        </div>
+        <div class="btns-div">
+            <a href="" class="a-btn-fill">搜索</a><a href="" class="a-btn-fill btn-gray">取消</a>
+        </div>
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="page-inner smt-note">
+    <h4>关于xxxx的通知</h4>
+    <span class="date">时间: 2016-12-11 15:33</span>
+    <br>
+    <br>
+
+    <p>汉瑞木业管理系统正式上线！请各部门认真对待，及时应用系统处理日常业务，保证数据的准确性。</p>
+
+    <p>“山木通”使木业行业能轻松的实现对订单、客户、资金、库存等集中管理，建立合理、简洁、大方、易操作的系统。达到流程可视化，过程透明化，操作简便化,为用户提高生产效率，降低管理成本，挖掘潜在客户等。</p>
+
+    <p>同时，“山木通”2.0在用户体验方面做了很大的改进和提升，并推出了移动版客户端，让客户随时可以了解最新状态，大大提高工作效率。同时，系统的安全性和稳定性也有革命性的改进，为客户提供更加有效，安全的服务！</p>
+
+
+</div>
+
+
+
+<div class="btns-div" >
+    <a href="javascript:history.back(-1);" target="myiframe" class="a-btn-fill btn-gray">返回</a>
+</div>
+
+
+<script>
+    //高级搜索框显示与隐藏
+
+
+
+    function toggleAdvPanel() {
+
+        var advBtn=document.getElementById('advBtn');
+        var advPanel=document.getElementById('advPanel');
+
+        console.log(advPanel.style.display);
+
+        console.log('toggle...');
+        if(advPanel.style.display=='')
+        {
+            advPanel.style.display='none';
+        }else if(advPanel.style.display=='none')
+        {
+            advPanel.style.display='';
+        }
+
+    }
+
+</script>
+
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

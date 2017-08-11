@@ -1,0 +1,23 @@
+.chk-div {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 44px; }
+  .chk-div input[type='checkbox'] {
+    display: none; }
+  .chk-div label {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    background: url("../img/radio-bg.png") no-repeat;
+    background-position: 0 0; }
+  .chk-div input[type="checkbox"]:checked + label {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    overflow: hidden;
+    background: url("../img/radio-bg.png") no-repeat;
+    background-position: 0 -50px; }
+
+/*# sourceMappingURL=chkbox.css.map */

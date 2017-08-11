@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购买山木通服务</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <link rel="stylesheet" href="../css/wx-pay.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+    <link rel="stylesheet" href="../css/smt-service.css"/>
+
+
+</head>
+<body>
+
+<div class="modal" id="feedback" style="display: none;">
+    <div class="modal-header">反馈
+        <div><i class="iconfont">&#xe615;</i></div>
+    </div>
+    <div class="modal-inner">
+        <div class="s-group"><input type="text" placeholder="您的称呼"></div>
+        <div class="s-group"><input type="text" placeholder="您的手机号码"></div>
+        <div class="s-group"><input type="text" placeholder="验证码"></div>
+
+        <div class="s-group"><textarea name="" id="" cols="" rows="5"
+                                       placeholder="如果您有任何产品问题,欢迎反馈给我们,我们会及时回复! 谢谢!"></textarea></div>
+    </div>
+    <div class="btns-div">
+        <a href="" class="a-btn-fill">提交</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray">取消</a>
+    </div>
+
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>戴树文 <span class="agent-level">[一级代理]</span> | <span class="font-gray">云销售平台</span></p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+            <!--<li><a href="#feedback" rel="modal:open">反馈</a></li>-->
+            <li>hr003<a href="" style="margin-left:5px;">[退出]</a></li>
+            <li><a href="notificationList.html" target="myiframe"><i class="iconfont" style="color:green;">&#xe61a;</i>消息<span>5</span></a>
+            </li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车<span>22</span></a></li>
+            <li><a href=""><i class="iconfont" style="color:deepskyblue;">&#xe6a3;</i>帮助</a></li>
+            <li id="setting-btn"><a href=""><i class="iconfont" style="color:orange;">&#xe6ae;</i>设置 <i
+                    class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="companyInfo.html" target="myiframe">公司信息</a></li>
+                <li><a href="receivingInfo.html" target="myiframe">收货信息</a></li>
+                <li><a href="log.html" target="myiframe">操作日志</a></li>
+                <li><a href="buySMT.html" target="myiframe">山木通服务</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">设置</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">山木通服务</a></li>
+                <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+                <!--<li><a href="">增加产品</a></li>-->
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href="javascript:toggleAdvPanel()" class="advSearchBtn" id="advBtn"><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+
+    <div class="adv-search" id="advPanel">
+        <div class="adv-search-title">
+            高级搜索
+        </div>
+
+        <div class="adv-search-inner">
+            <table class="adv-search-table">
+                <tr>
+                    <td>订单号</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>客户名称</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>收货信息</td>
+                    <td colspan="3"><input type="text" placeholder="收货人/电话/客户名称"></td>
+                </tr>
+                <tr>
+                    <td>订单类型</td>
+                    <td colspan="3"><input type="radio" name="order" id="orderA"> <label for="orderA">订货单</label>
+                        <input type="radio" name="order" id="orderB"> <label for="orderB">退货单</label></td>
+                </tr>
+                <tr>
+                    <td>订单状态</td>
+                    <td colspan="3">
+                        <input type="checkbox" id="statusA"> <label for="statusA">全部</label>
+                        <input type="checkbox" id="statusB"> <label for="statusB">待订单审核</label>
+                        <input type="checkbox" id="statusC"> <label for="statusC">待财务审核</label>
+                        <input type="checkbox" id="statusD"> <label for="statusD">待出库审核</label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3">
+                        <input type="checkbox" id="statusE"> <label for="statusE">待发货确认</label>
+                        <input type="checkbox" id="statusF"> <label for="statusF">待收货确认</label>
+                        <input type="checkbox" id="statusG"> <label for="statusG">已完成</label>
+                        <input type="checkbox" id="statusH"> <label for="statusH">已作废</label></td>
+                </tr>
+                <tr>
+                    <td>订单标签</td>
+                    <td colspan="3">
+                        <input type="radio" name="sale" id="saleA"> <label for="saleA">不限</label>
+                        <input type="radio" name="sale" id="saleB"> <label for="saleB">特价</label>
+                        <input type="radio" name="sale" id="saleC"> <label for="saleC">非特价</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>下单时间</td>
+                    <td colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>商品</td>
+                    <td colspan="3"><input type="text" placeholder="请输入商品名称/编码/关键字/条形码"></td>
+                </tr>
+                <tr>
+                    <td>客户归属区域</td>
+                    <td colspan="3">
+                        <input type="text" list="region">
+                        <datalist id="region">
+                            <option value="全部地区"></option>
+                            <option value="华东地区"></option>
+                            <option value="华南地区"></option>
+                            <option value="华北地区"></option>
+                        </datalist>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>客户级别</td>
+                    <td colspan="3">
+                        <input type="text" list="clients">
+                        <datalist id="clients">
+                            <option value="全部级别"></option>
+                            <option value="一级代理"></option>
+                            <option value="二级代理"></option>
+                            <option value="三级代理"></option>
+                            <option value="代签代理"></option>
+
+                        </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>订单付款状态</td>
+                    <td colspan="3">
+                        <input type="checkbox" id="payA"> <label for="payA">全部</label>
+                        <input type="checkbox" id="payB"> <label for="payB">未付款</label>
+                        <input type="checkbox" id="payC"> <label for="payC">付款待审核</label>
+                        <input type="checkbox" id="payD"> <label for="payD">部分付款</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3">
+
+                        <input type="checkbox" id="payE"> <label for="payE">已付款</label></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="btns-div">
+            <a href="" class="a-btn-fill">搜索</a><a href="" class="a-btn-fill btn-gray">取消</a>
+        </div>
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner" style="padding-left:300px;position: relative;">
+
+    <div class="ul-wrap">
+        <ul class="ul-nav">
+            <li class="service-li"><a href="buySMT.html" target="_self">服务订购</a></li>
+            <li class="service-li"><a href="payRecord.html" target="_self">付款记录</a></li>
+            <li class="service-li"><a href="invoice.html" target="_self">申请发票</a></li>
+            <li class="service-li"><a href="invoiceRecord.html" target="_self">发票记录</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="price-card price-card-active">
+            <div>标准版:不限用户数</div>
+            <div class="price">￥600 <span class="unit-year">/年</span></div>
+        </div>
+
+    </div>
+
+    <div class="buy-row-div">
+        <span>服务年限</span>
+        <div class="year year-active">1年</div>
+        <div class="year">2年</div>
+        <div class="year">3年</div>
+    </div>
+
+    <div class="buy-row-div">
+        <span>应付金额</span>
+        <div class="pay-money">￥600</div>
+    </div>
+
+    <!--<div class="buy-row-div">-->
+        <!--<input type="radio" id="r-1" name="receipt"> <label for="r-1">不开发票</label>-->
+        <!--<input type="radio" id="r-2" name="receipt"> <label for="r-2">开具发票(如需补开发票,请于一个月内提出申请)</label>-->
+    <!--</div>-->
+
+    <div class="buy-row-div">
+        <a href="weixinPay.html" class="a-btn-fill">立即下单</a>
+
+    </div>
+
+
+</div>
+
+
+<script>
+    //高级搜索框显示与隐藏
+
+
+    $(function () {
+        $('.service-li:eq(0) a').addClass('service-on');
+    });
+
+    $('#advBtn').click(function () {
+        $('#advPanel').toggle();
+
+    })
+
+
+</script>
+
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

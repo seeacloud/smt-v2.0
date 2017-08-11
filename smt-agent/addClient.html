@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addClient</title>
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/clients.css"/>
+    <link rel="stylesheet" href="../css/stock.css"/>
+    <link rel="stylesheet" href="../css/widgetv2.css"/>
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap"><ul>
+            <li><a href="">首页</a></li>
+            <li><i class="iconfont">&#xe60d;</i></li>
+            <li><a href="">客户管理</a></li>
+            <li><i class="iconfont">&#xe60d;</i></li>
+
+            <li><a href="">意向客户</a></li>
+            <li><i class="iconfont">&#xe60d;</i></li>
+
+            <li><a href="">新增意向客户</a></li>
+        </ul>
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+<div class="pageHeader">
+    <div class="headerleft">
+        <h3 style="font-size:15px;font-weight:normal;">客户信息</h3>
+    </div>
+</div>
+
+<div class="tableWrap wid-50percent">
+    <table class="product-baseinfo-table">
+        <tr>
+            <td><span class="star">*</span>客户姓名</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>客户性别</td>
+            <td>
+                <div>
+
+                </div><input type="radio" id="male" name="gender" style="width:20px;"><label for="male">先生</label>
+                <input type="radio" id="female" name="gender" style="width:20px;"><label for="female">女士</label></td>
+        </tr>
+
+        <tr>
+            <td><span class="star">*</span>客户状态</td>
+            <td>
+                <div class="i-b col name">
+                    <div id="dateSelect" class="mySelect"><div class="show"><span class="data" val="year">客户状态</span></div>
+                        <ul class="ul-select">
+                            <li val=""></li>
+                            <li val="">客户登记</li>
+                            <li val="">已报价</li>
+                            <li val="">已成交</li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>客户来源</td>
+            <td><div class="i-b col name">
+                <div id="dateSelect" class="mySelect"><div class="show"><span class="data" val="year">客户来源</span></div>
+                    <ul class="ul-select">
+                        <li val="">电话客</li>
+                        <li val="">上门客</li>
+                        <li val="">老客户</li>
+                        <li val="">介绍客</li>
+                        <li val="">广告客</li>
+
+                    </ul>
+                </div>
+            </div>
+            </td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>客户电话</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>联系地址</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>备注</td>
+            <td><textarea name="" id="" cols="30" rows="10" style="width:100%;"></textarea></td>
+        </tr>
+
+    </table>
+</div>
+
+
+<div class="btn-group">
+    <button class="m-btn m-btn-red a-btn-fill-mini">保存</button>
+    <button class="m-btn m-btn-gray a-btn-fill-mini">取消</button>
+
+</div>
+
+
+</body>
+</html>

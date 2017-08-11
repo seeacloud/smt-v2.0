@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cart</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item nav-item-active" data-content="">购物车</div>
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+
+<div class="tableWrap">
+
+
+
+
+
+    <div id="modal1" style="display: none;">
+
+        <div class="modal-header">删除已选产品 <div><i class="iconfont">&#xe615;</i></div></div>
+        <div class="modal-inner">
+            <p>确认删除该产品? 本操作不可恢复!</p>
+        </div>
+
+        <div class="btns-div">
+            <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+            <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+        </div>
+
+
+    </div>
+
+    <!--<p><a href="#modal1" rel="modal:open">open modal</a></p>-->
+
+
+    <table class="cart-table">
+
+        <tr class="tr-hover-none">
+            <th><input type="checkbox"></th>
+            <th></th>
+            <th>产品信息</th>
+            <th></th>
+            <th></th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>金额</th>
+            <th>操作</th>
+        </tr>
+
+        <tr class="tr-hover-none">
+            <td><input type="checkbox"></td>
+            <td colspan="2"><span class="company-name">厂家: 汉瑞木业有限公司</span></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+            <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+            <a href="">移入收藏夹</a></td>
+        </tr>
+
+        <tr class="tr-hover-none">
+            <td><input type="checkbox"></td>
+            <td colspan="2"><span class="company-name">厂家: 汉瑞木业有限公司</span></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                    <li><span class="sale">特价</span></li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+
+
+        <!--company name-->
+        <tr class="tr-hover-none">
+            <td><input type="checkbox"></td>
+            <td colspan="2"><span class="company-name">厂家: 汉瑞木业有限公司</span></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                    <li><span class="sale">特价</span></li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+
+        <!--company name-->
+        <tr class="tr-hover-none">
+            <td><input type="checkbox"></td>
+            <td colspan="2"><span class="company-name">厂家: 汉瑞木业有限公司</span></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                    <li><span class="sale">特价</span></li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                    <li><span class="sale">特价</span></li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+        <tr class="tr-border">
+            <td><input type="checkbox"></td>
+            <td></td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td>
+                <ul>
+                    <li>【美国进口】白橡木</li>
+                    <li>厂家直销 实木楼梯扶手立柱踏板栏杆</li>
+                    <li><span class="sale">特价</span></li>
+                </ul></td>
+            <td>漆色分类:透明漆</td>
+            <td><span class="old-price">￥1800</span></br>
+                <span >￥1200</span></td>
+            <td><a href="" class="input-btn">-</a><input type="text" value="2"><a href="" class="input-btn">+</a></td>
+
+            <td class="total-money">￥2400</td>
+            <td><a href="#modal1" rel="modal:open">删除</a></br>
+                <a href="">移入收藏夹</a></td>
+        </tr>
+
+        <tr class="tr-gap">
+            <td></td>
+        </tr>
+
+        <tr class="cart-check">
+            <td><input type="checkbox"></td>
+            <td>全选</td>
+            <td colspan="2"><a href="#modal1" rel="modal:open">删除</a><a href="">移入收藏夹</a></td>
+            <td></td>
+            <td></td>
+            <td>已选产品共 <span class="total-num">2</span>件</td>
+            <td>合计 <span class="total-money">￥654400</span></td>
+            <td class="order-btn-td"><a href="">下单</a></td>
+        </tr>
+    </table>
+</div>
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+body, html{
+	margin: 0;
+	padding: 0;
+	height: 99%;
+}
+
+.input-money{
+	text-align: center;
+}
+
+.hide-div{
+	display: none;
+}
+
+/*css4myGrid start*/
+.my-grid{
+	position: relative;
+	border-collapse:collapse;
+	color: #666;
+	border: 1px solid #ddd;
+	color: #666;
+	font-size: 12px;
+	font-family: 'Tahoma, "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "ºÚÌå", "ËÎÌå", sans-serif !important';
+}
+
+.my-grid input[type='text'], .my-grid select{
+	border: 1px solid #ddd;
+}
+
+.my-grid .my-filterBar{
+	height: 40px;
+	line-height: 40px;
+}
+
+.my-grid .my-filterBar .div-filter{
+	margin: 5px 10px 0 0;
+}
+
+.my-grid .my-filterBar .input-filter{
+	border: 1px solid #ddd;
+	outline: none;
+	padding: 0 5px;
+	vertical-align: top;
+	height: 30px;
+}
+
+.my-grid .my-filterBar .input-filter:focus{
+	border: 1px solid #df3033;
+}
+
+.my-grid .my-filterBar .searchBtn{
+	vertical-align: top;
+	width: 32px;
+	height: 31px;
+	cursor: pointer;
+	background: url('../../images/searchBtn.png') center no-repeat;
+}
+
+.my-grid .div-filter{
+	float: right;
+}
+
+.my-grid .out-grid-head{
+	background: #eee;
+}
+
+.my-grid .out-grid-body{
+	min-height: 100px;
+}
+
+.my-grid table{
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	margin-bottom: 0;
+	border: 0;
+}
+
+.my-grid table div{
+	float: none;
+}
+
+.my-grid th{
+	padding: 10px 5px;
+	overflow: hidden; 
+	white-space: nowrap;  
+	text-overflow: ellipsis;
+	box-sizing: border-box;
+}
+
+.my-grid tr[selrow]{
+	background: #D4E7F8;
+}
+
+.my-grid tr th:first-child{
+	padding-left: 5px;
+}
+
+.my-grid td{
+	padding: 5px;
+	text-align: left;
+	font-size: 12px;
+	border-left: 1px solid #ddd;
+	box-sizing: border-box;
+}
+
+.my-grid table tr td:first-child{
+	padding-left: 5px;
+	border-left: 0;
+	width: auto;
+}
+
+.my-grid .my-grid-body tr{
+	border-bottom: 1px solid #ddd;
+}
+
+.my-grid .div-grid-body {
+	overflow: auto;
+}
+
+.my-grid th{
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.my-grid .tr-head{
+	background: #eee;
+}
+
+.my-grid table tr td.wg-seq, .my-grid table tr th.wg-seq{
+	text-align: center;
+	width: 5%;
+	max-width: 50px;
+}
+
+.my-grid table tr td.wg-multi, .my-grid table tr th.wg-multi{
+	text-align: center;
+	width: 5%;
+	max-width: 35px;
+}
+
+.my-grid .input-edit{
+	outline: none;
+	width: 100%;
+	height: 100%;
+}
+
+.my-grid .td-hide{
+	display: none;
+}
+
+.my-grid .input-edit:focus{
+	border: 1px solid red;
+}
+
+.my-grid span{
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden; 
+	white-space: nowrap;  
+	text-overflow: ellipsis; 
+}
+
+.my-grid .my-grid-foot td{
+	padding: 10px 5px;
+	text-align: center;
+	border: 0;
+}
+
+.my-grid .my-grid-foot input{
+	height: 28px;
+	width: calc(100% - 20px);
+}
+
+.my-grid .my-grid-foot tr{
+	border: 0;
+}
+
+.my-grid .my-pageBar{
+	position: absolute;
+	text-align: right;
+	height: 40px;
+	line-height: 40px;
+	border-top: 1px solid #ddd;
+	padding-right: 10px;
+	bottom: 0;
+	width: calc(100% - 10px);
+}
+
+.my-grid .my-pageBar *{
+	vertical-align: middle;
+}
+
+.my-grid .my-pageBar .records{
+	margin: 0 7px;
+}
+
+.my-grid .my-pageBar .ml{
+	margin-left: 15px;
+}
+
+.my-grid .my-pageBar .rows{
+	width: 45px;
+	height: 18px;
+	margin: 0 7px;
+}
+
+.my-grid .my-pageBar .page{
+	outline: none;
+	height: 18px;
+	width: 30px;
+	text-align: center;
+	margin: 0 5px;
+}
+
+.my-grid .my-pageBar .totalPage{
+	margin: 0 7px;
+}
+
+.my-grid .my-pageBar .page:focus{
+	border: 1px solid #DF3033;
+}
+
+.my-grid a{ 
+	text-decoration: none;
+}
+
+.my-grid .my-pageBar a{
+	cursor: pointer;
+	color: #666;
+	font-size: 12px;
+	border: 1px solid #ddd;
+}
+
+.my-grid .my-pageBar a:hover{
+	border: 1px solid #DF3033;
+	color: #DF3033;
+}
+
+.my-grid .my-pageBar #preBtn{
+	padding: 2px 8px 3px 2px;
+}
+
+#nextBtn{
+	margin-left: 10px;
+	padding: 2px 2px 3px 8px;
+}
+
+/*css4myGrid end*/
+
+
+/*css4myCombobox start*/
+.my-combobox{
+	border: 1px solid #ddd;
+	position: relative;
+	padding: 2px;
+	color: #666;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	/*width: 200px;*/
+	font-size: 12px;
+	color: #666;
+	font-family: 'Tahoma, "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "ºÚÌå", "ËÎÌå", sans-serif !important';
+}
+
+.my-combobox .span-data-show{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: calc(100% - 33px);
+	padding: 0 5px;
+}
+
+.my-combobox .input-edit[type='text']{
+	border: 0;
+	outline: none;
+	padding: 0 5px;
+	height: 28px;
+	width: calc(100% - 22px);
+	box-sizing: border-box;
+}
+
+/*
+.my-combobox .input-edit:focus{
+	border: 1px solid red;
+}*/
+
+.my-combobox .btn-more{
+	margin: 0;
+	box-sizing: border-box;
+    background: #eee;
+    cursor: pointer;
+	padding: 7px 3px;
+	vertical-align: top;
+	display: inline-block;
+	*dispaly: inline;
+	*zoom: 1;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: Tahoma, "Microsoft YaHei", "Î¢ÈíÑÅºÚ", "ºÚÌå", "ËÎÌå", sans-serif !important;
+	float: right;
+}
+
+.my-combobox .span-img{
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+.my-combobox .btn-more:hover{
+	background: #ddd;
+}
+
+.my-combobox .div-combobox{
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: -1px;
+	top: 33px;
+	min-height: 30px;
+	background: #fff;
+	max-height: 200px;	
+	overflow: auto;
+	z-index: 10;
+	border: 1px solid #DF3033;
+}
+
+.my-grid .my-combobox{
+	width: 95%;
+}
+
+.my-combobox .div-combobox ul{
+	padding: 0;
+	margin: 0;
+}
+
+.my-combobox .div-combobox li{
+	height: auto;
+	padding: 5px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+	list-style-type:none;
+	box-sizing: border-box;
+}
+
+.my-combobox .div-combobox li.sel{
+	background: #eee;
+}
+
+.my-combobox .div-combobox .span-data{
+	width: calc(100% - 65px);
+	height: 20px;
+	line-height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	word-break: keep-all;
+}
+/*css4myCombobox end */
+
+
+
+/*
+mySelect start
+*/
+.mySelect{
+	display: inline-block;
+	position: relative;
+	background: #fff;
+	border: 1px solid #ddd;
+	min-width: 100px;
+}
+
+.mySelect:hover > ul{
+	display: block;
+}
+
+.mySelect .show .data{
+	cursor: default;
+	display: inline-block;
+	padding-left: 10px;
+	width: 100%;
+}
+
+.mySelect .show .data:after{
+	position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid #666;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    z-index: 10;
+    top: 8px;
+    right: 7px;
+}
+
+.mySelect ul{
+	display: none;
+	position: absolute;
+	background: #fff;
+	border: 1px solid #ddd;
+	width: 100%;
+	left: -1px;
+}
+
+.mySelect ul li{
+	cursor: pointer;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+}
+
+.mySelect ul li:hover{
+	background: #eee;
+}
+
+/*
+mySelect end
+*/
+
+
+.my-grid table tr td{
+	border-bottom: 0;
+}

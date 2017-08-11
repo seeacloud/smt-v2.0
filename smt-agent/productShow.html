@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product-show</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <link rel="stylesheet" href="../css/easydropdown.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+    <script src="../js/jquery.easydropdown.min.js"></script>
+
+
+
+
+</head>
+<body>
+
+
+
+
+<div class="modal-cart" id="cart-1" style="display: none;width:400px;">
+
+    <div class="modal-header">选择产品规格 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+
+       <div class="smt-select">
+           <div class="smt-select-label">材质</div>
+           <select name="" id="" class="dropdown">
+            <option value="">白橡木</option>
+            <option value="">水曲柳</option>
+        </select>
+       </div>
+
+        <div class="smt-select">
+            <div class="smt-select-label">材质</div>
+            <select name="" id="" class="dropdown">
+                <option value="">白橡木</option>
+                <option value="">水曲柳</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display: none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">产品管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">产品展示</a></li>
+                <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+                <!--<li><a href="">增加产品</a></li>-->
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+
+<!--content start-->
+
+
+
+
+<div class="tableWrap">
+    <br>
+   <p> <a href="">全部结果</a><i class="iconfont">&#xe71b;</i><a class="filter">分类: 扶梯<i class="iconfont">&#xe8db;</i></a>
+       <i class="iconfont">&#xe71b;</i><a class="filter">价格: 1001-2000<i class="iconfont">&#xe8db;</i></a> <i class="iconfont">&#xe71b;</i>
+       <a class="filter">材质: 实木,层压板 <i class="iconfont">&#xe8db;</i></a></p>
+    <br>
+    <table class="product-filter-table">
+        <tr>
+            <th colspan="4"><h5>筛选</h5> <span>共122件产品</span></th>
+        </tr>
+        <tr>
+            <td class="font-bold">品牌</td>
+            <td>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>汉瑞木业</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>熊猫木业</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>自有成品</a>
+            </td>
+            <td></td>
+            <td><a class="a-btn-nofill" id="filter-btn-3">+多选</a></td>
+        </tr>
+        <tr id="filter-tr-1">
+
+            <td class="font-bold">分类</td>
+            <td >
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>扶梯</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>门</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>桌子</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>窗户</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>沙发</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>橱柜</a>
+                <p class="" style="text-align:center;margin-top:20px; display:none;">
+                    <a href="" class="a-btn-fill">确定</a><a href="" class="a-btn-fill btn-gray">取消</a>
+                </p>
+            </td>
+
+
+            <td></td>
+            <td> <a class="a-btn-nofill" id="filter-btn-1">+多选</a></td>
+        </tr>
+
+        <tr>
+            <td class="font-bold">价格</td>
+            <td>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>100-999</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>1000-1999</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>2000-4999</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>5000-9999</a>
+                <a href="javascript:void(0);" class="check-link "><i class="check-icon"></i>10000+</a>
+            </td>
+            <td></td>
+            <td> <a class="a-btn-nofill" id="filter-btn-2">+多选</a></td>
+        </tr>
+
+    </table>
+</div>
+
+   <div class="p-card-wrap">
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/drawer.jpg" alt=""></a>
+                    </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-1.jpg" alt=""></a>
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-2.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-3.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-4.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-5.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-6.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-7.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-8.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-9.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-10.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+       <div class="p-card">
+           <div class="card-inner">
+               <div class="card-content">
+                   <div class="imgBox">
+                       <a href="productDetail.html" target="myiframe"><img src="../img/s-11.jpg" alt=""></a>
+
+                   </div>
+
+                   <div class="content-box">
+                       <h5 class="">五斗柜</h5> <span>【美国进口】</span> <span class="push-right">汉瑞木业</span>
+                       <p>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护
+                           栏可烤漆批发厂家直销实木楼梯</p>
+                       <span class="money">¥1799.00</span><span class="sale">团购</span>
+                       <span class="push-right "><a href="#cart-1" rel="modal:open"><i class="iconfont">&#xe611;</i>加入购物车</a></span>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+<div class="page-inner"><div class="pagefooter">
+    <div class="footerright">
+        <div class="pager">
+            共计
+            <span class="total">20</span>条 每页显示
+            <select name="itemNum">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+
+
+            条 第 <input type="text" placeholder="1">页
+            共 <span class="totalPage">2</span>页
+            <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+            <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+        </div>
+    </div>
+</div></div>
+
+<!--<script src="js/smt-subpage.js"></script>-->
+
+<script src="../js/smt.js"></script>
+
+<script>
+    var imgBoxAry=document.querySelectorAll('.imgBox');
+    var imgAry=document.querySelectorAll('.imgBox img');
+    for(var i=0;i<imgAry.length;i++)
+    {
+        if((.85*imgAry[i].offsetWidth)>imgAry[i].offsetHeight)
+        {
+            imgAry[i].style.height="100%";
+        }
+        else
+        {
+            imgAry[i].style.width="100%";
+        }
+    }
+    for(var i=0;i<imgBoxAry.length;i++)
+    {
+//        console.log('width is:',imgBoxAry[i].offsetWidth);
+        imgBoxAry[i].style.height=.85*imgBoxAry[i].offsetWidth+'px';
+    }
+
+    window.onresize=function () {
+        for(var i=0;i<imgBoxAry.length;i++)
+        {
+            imgBoxAry[i].style.height=.85*imgBoxAry[i].offsetWidth+'px';
+        }
+    }
+
+//    设置过滤条件状态
+
+    $('.check-link').click(function () {
+        if($(this).hasClass('check-link-active'))
+        {
+            $(this).removeClass('check-link-active');
+        }else
+        {
+            $(this).addClass('check-link-active');
+        }
+    })
+
+    $('#filter-btn-1').click(function () {
+//        console.log($(this));
+        $('#filter-btn-1').hide();
+        $('#filter-tr-1 p').toggle();
+        $('#filter-tr-1 a i').toggle();
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

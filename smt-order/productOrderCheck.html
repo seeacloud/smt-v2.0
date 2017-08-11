@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>入库审核</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/supplier.css"/>
+    <link rel="stylesheet" href="../css/widgetv2.css"/>
+
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+
+
+</head>
+<body>
+<!--弹出框-->
+<div id="check-pass" style="display: none;width:300px;">
+
+    <div class="modal-header">审核通过 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>确认审核通过？</p>
+    </div>
+
+    <div class="btns-div">
+        <a href="#check-success" rel="modal:open" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+<div id="check-success" style="display: none;width:300px;">
+
+    <div class="modal-header">审核成功<div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>审核成功!</p>
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill "> 确认</a>
+        <!--<a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>-->
+    </div>
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">成品管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">成品采购订单</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">入库审核</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+
+<!--content start-->
+
+
+
+<div class="pageHeader ">
+    <div class="headerleft">
+
+
+        <span class="with-star">供应商：</span> 莫亚木业有限公司
+
+        <span class="with-star" style="margin-left:20px;">仓库：</span> <input type="text" placeholder="调用仓库选择控件">
+    </div>
+
+
+</div>
+
+
+
+<div class="tableWrap">
+    <table class="table-normal">
+        <tr>
+            <th>序号</th>
+            <th>产品编号</th>
+            <th>产品名称</th>
+            <th>规格</th>
+            <th>单位</th>
+            <th>采购数</th>
+            <th>已入库数</th>
+            <th>本次入库数</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>P7762321</td>
+            <td>美国进口白橡木餐桌餐椅四件套</td>
+            <td>一桌四椅</td>
+            <td>套</td>
+            <td>20</td>
+            <td>5</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>P7762321</td>
+            <td>美国进口白橡木餐桌餐椅四件套</td>
+            <td>一桌四椅</td>
+            <td>套</td>
+            <td>20</td>
+            <td>5</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>合计</td>
+            <td>40</td>
+        </tr>
+
+
+    </table>
+    <div class="deliver-info">
+        <table class="no-border-bg-hover table-normal">
+            <tr>
+                <td><span class="with-star">入库日期</span></td>
+                <td><input type="text" placeholder="调用日期控件"></td>
+                <td><span class="with-star">入库单号</span></td>
+                <td><input type="text" value="999999999"></td>
+            </tr>
+            <tr class=" ">
+                <td><span >经办人</span></td>
+                <td ><input type="text" placeholder="调用日期控件"></td>
+                <td ><span>备注</span></td>
+                <td rowspan="2" style="vertical-align: top;">
+                    <textarea name="" id="" cols="30" rows="6" style="width:100%;"></textarea>
+                </td>
+            </tr>
+            <tr class=" ">
+                <td><span >入库类型</span></td>
+                <td><input type="text"/></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="info-wrap-bdr">
+                    <div >
+                        <p>采购单号：999999 采购员：王xx</p>
+                        <p>采购备注：</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <div class="btn-group-wrap">
+        <!--<a href="#modal-invalid" rel="modal:open"><i class="iconfont">&#xe614;</i></a>-->
+        <a href="#check-pass" rel="modal:open" class="a-btn-fill">审核通过</a>
+        <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">返回</a>
+    </div>
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

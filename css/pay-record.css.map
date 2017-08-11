@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAiBI,4BACA;EACE,cAAc,EAAE,GAAG;EAEnB,+BACA;IACE,UAAU,EAAE,IAAI;AAKlB,uCACA;EACE,KAAK,EAAE,eAAe;EACtB,MAAM,EAAE,eAAe;;AAO/B,MACA;EACE,KAAK,EAnCG,OAAO",
+"sources": ["pay-record.scss"],
+"names": [],
+"file": "pay-record.css"
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确认</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+
+
+
+
+<div id="modal-align-center" style="display: none;">
+
+    <div class="modal-header">确认 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>是否对 <span class="font-bold">订单:112132132131</span> 进行收货确认? </p>
+        <p>请在确认收到货物后进行此操作!</p>
+
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+<!--<p><a href="#modal-align-center" rel="modal:open">open modal</a></p>-->
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item" data-content="">订货管理</div>
+            <div class="nav-item " data-content="">订货单列表</div>
+            <div class="nav-item nav-item-active" data-content="">确认</div>
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner">
+    <div class="order-title">
+        <p class="font-bold">订货单号:1213123122 </p>
+        <br>
+        <p>【发货信息】 发货人:汉瑞木业有限公司 发货日期: 2016-10-18 </p>
+    </div>
+</div>
+
+
+
+
+<div class="tableWrap">
+    <h5>发货记录</h5>
+    <br>
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th>主图</th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>本次发货数量</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>2件</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>5件</td>
+        </tr>
+
+        <tr class="tr-hover-none">
+            <td colspan="4">
+                <div>
+                    <p>【状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态】<span class="red-text">待签收</span></p>
+                    <br>
+                    <p>【发货信息】出库编号:1212312312, 日期: 2016-10-18</p>
+                    <br>
+                    <p>【物流信息】发货日期: 2016-10-18, 物流公司: 顺丰快递, 物流单号:1112 1112 5587 , <a href="logisticTrack.html" target="myiframe"  class="a-red">物流跟踪  &nbsp;<i class="iconfont">&#xe619;</i></a></p>
+
+                </div>
+            </td>
+            <td><a href="#modal-align-center" rel="modal:open"  class="a-btn-fill push-right">确认</a></td>
+        </tr>
+
+
+    </table>
+
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th>主图</th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>本次发货数量</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>2件</td>
+        </tr>
+        <tr class="tr-hover-none">
+            <td colspan="4">
+                <div>
+                    <p>【状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态】<span class="red-text">待签收</span></p>
+                    <br>
+                    <p>【发货信息】出库编号:1212312312, 日期: 2016-10-18</p>
+                    <br>
+                    <p>【物流信息】发货日期: 2016-10-18, 物流公司: 顺丰快递, 物流单号:1112 1112 5587 , <a href="logisticTrack.html" target="myiframe"  class="a-red">物流跟踪  &nbsp;<i class="iconfont">&#xe619;</i></a></p>
+
+                </div>
+            </td>
+            <td><a href="#modal-align-center" rel="modal:open"  class="a-btn-fill push-right">确认</a></td>
+        </tr>
+    </table>
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th>主图</th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>本次发货数量</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>2件</td>
+        </tr>
+        <tr class="tr-hover-none">
+            <td colspan="4">
+                <div>
+                    <p>【状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态】<span class="red-text">待签收</span></p>
+                    <br>
+                    <p>【发货信息】出库编号:1212312312, 日期: 2016-10-18</p>
+                    <br>
+                    <p>【物流信息】发货日期: 2016-10-18, 物流公司: 顺丰快递, 物流单号:1112 1112 5587 , <a href="logisticTrack.html" target="myiframe"  class="a-red">物流跟踪  &nbsp;<i class="iconfont">&#xe619;</i></a></p>
+
+                </div>
+            </td>
+            <td><a href="#modal-align-center" rel="modal:open"  class="a-btn-fill push-right">确认</a></td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="btns-div">
+    <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">返回</a>
+</div>
+
+
+<!--<script src="js/smt-subpage.js"></script>-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

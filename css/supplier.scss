@@ -1,0 +1,395 @@
+.page-inner
+{
+  //padding-bottom: 0;
+}
+
+.red
+{
+  color: red;
+}
+
+.table-normal
+{
+  margin-top: 0;
+  td:first-child
+  {
+    width: auto;
+    text-align: left;
+  }
+  th:first-child
+  {
+    text-align: left;
+  }
+}
+
+.with-star
+{
+  position: relative;
+}
+.with-star:before
+{
+  position: absolute;
+  display: inline-block;
+  left: -8px;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+  content: '*';
+  color: red;
+}
+
+.info-item
+{
+  margin: 10px 0;
+  input[type="text"]
+  {
+    width: 500px;
+  }
+  input[type="radio"]
+  {
+    margin-right: 5px;
+  }
+  label
+  {
+    margin-right: 20px;
+  }
+
+  textarea
+  {
+    width: 400px;
+  }
+  input[type="checkbox"]
+  {
+    margin-right: 5px;
+    margin-left: 30px;
+  }
+  input[type="checkbox"]:first-of-type
+  {
+    margin-left: 0;
+  }
+
+  .add-section
+  {
+    color: red;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+  .add-section:hover
+  {
+    background: red;
+    color: #fff;
+  }
+}
+
+.rule-detail
+{
+  margin: 15px 0;
+  padding-left: 25px;
+  i.iconfont
+  {
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  i.iconfont:hover
+  {
+    color: red;
+  }
+}
+
+.info-item-title
+{
+  display: inline-block;
+  width: 80px;
+
+}
+
+.ads-box
+{
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #ddd;
+  margin-left: 85px;
+
+  
+  .add-img-btn
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .add-img-btn:hover
+  {
+    color: red;
+    .add
+    {
+      color: inherit;
+    }
+  }
+  .add
+  {
+    font-size: 48px;
+    color: #999;
+  }
+}
+
+.no-ads
+{
+  text-align: center;
+  img
+  {
+    width: 300px;
+    margin-bottom: 40px;
+    
+  }
+}
+
+
+.page-wrap
+{
+  position: relative;
+  .sec-title
+  {
+    font-size: 14px;
+  }
+  .advance-search
+  {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    padding: 20px;
+    -webkit-box-shadow:  0 5px 10px #999;
+    -moz-box-shadow:  0 5px 10px #999;
+    box-shadow:  0 5px 10px #999;
+  }
+}
+
+.table-promotion
+{
+  img
+  {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.tag
+{
+  background: red;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin: 0 5px;
+}
+
+
+
+.table-add-promo
+{
+  margin-bottom: 20px;
+  th:first-child
+  {
+    width: 50px;
+  }
+  th:first-child +th
+  {
+    width: 50px;
+  }
+  th:first-child +th +th
+  {
+    text-align: left;
+  }
+
+  tr
+  {
+    td:first-child +td +td
+    {
+      text-align: left;
+    }
+  }
+}
+
+
+.promo-rules
+{
+  margin: 0 0 20px 85px;
+
+  input[type="text"]
+  {
+    width: 100px;
+    margin: 0 5px;
+    border: none;
+    border-bottom: 1px solid #aaa;
+  }
+  input[type="checkbox"]
+  {
+    margin-right: 10px;
+  }
+}
+
+.rule-intro
+{
+  position: relative;
+  line-height: 30px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.rule-intro:hover
+{
+  color: red;
+}
+
+.rule-spec
+{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 350px;
+  background: #fff;
+  display: none;
+  -webkit-box-shadow:  2px 2px 5px #aaa;
+  -moz-box-shadow:  2px 2px 5px #aaa;
+  box-shadow:  2px 2px 5px #aaa;
+}
+.bg-blue
+{
+  background: deepskyblue;
+  color: #fff;
+}
+
+.bg-orange
+{
+  background: orange;
+  color: #fff;
+}
+.bg-purple
+{
+  background: mediumpurple;
+  color: #fff;
+}
+
+
+.comment-text
+{
+  color: #aaa;
+}
+
+
+
+.filter-item
+{
+  input[type="text"]
+  {
+    height: 26px;
+  }
+}
+
+td.info-wrap-bdr
+{
+  padding: 20px;
+  //border: 1px solid #ddd;
+  width: 100%;
+  p
+  {
+    line-height: 2em;
+  }
+}
+
+.deliver-info
+{
+  width: 100%;
+
+  table
+  {
+    tr
+    {
+      td:first-child
+      {
+        width: 100px;
+      }
+      td
+      {
+        padding-right: 0;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

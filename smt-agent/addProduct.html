@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addProduct</title>
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item" data-content="">产品管理</div>
+            <div class="nav-item" data-content="">产品列表</div>
+            <div class="nav-item nav-item-active" data-content="">新增产品</div>
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+<div class="pageHeader">
+    <div class="headerleft">
+        <h3>产品信息</h3>
+    </div>
+</div>
+
+<div class="tableWrap wid-50percent">
+    <table class="product-baseinfo-table">
+        <tr>
+            <td><span class="star">*</span>产品名称</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>产品类别</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td>计量单位</td>
+            <td><input type="text" ></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>是否上架</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>搜索关键字</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>排序值</td>
+            <td><input type="text" class="required"></td>
+        </tr>
+        <tr>
+            <td><span class="star">*</span>产品标签</td>
+            <td>
+                <span class="product-label">新品上架</span>
+                <span class="product-label product-label-active">热卖推荐</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="tableWrap ">
+    <table class="set-product">
+        <tr>
+            <th class="th-checkbox"><input type="checkbox" checked="checked"></th>
+            <th class="align-left wid-100px">设置多规格</th>
+            <th></th>
+            <th class="wid-50px"></th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td class="align-left"><input type="text" placeholder="请输入规格名"></td>
+            <td><div class="set-attr-div"><div class="label-attr" data-content="">全实木 <span>
+                <i class="iconfont">&#xe615;</i></span></div> <div class="label-attr" data-content="">透明漆 <span>
+                <i class="iconfont">&#xe615;</i></span></div><input type="text" placeholder="请输入规格值"></div></td>
+            <td class="last-td"><i class="iconfont">&#xe615;</i></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td class="align-left"><input type="text" placeholder="请输入规格名"></td>
+            <td><div class="set-attr-div"><div class="label-attr" data-content="">3*2米 <span>
+                <i class="iconfont">&#xe615;</i></span></div> <div class="label-attr" data-content="">加厚 <span>
+                <i class="iconfont">&#xe615;</i></span></div><input type="text" placeholder="请输入规格值"></div></td>
+            <td class="last-td"><i class="iconfont">&#xe615;</i></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td class="align-left"><a href="" class="a-hover-fill">+添加规格</a></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<div class="tableWrap">
+    <table class="product-attr-table">
+        <tr>
+            <th>序号</th>
+            <th>略图</th>
+            <th>规格1</th>
+            <th>规格2</th>
+            <th>产品编码</th>
+            <th>条形码</th>
+            <th>市场销售价</th>
+            <th>订货价</th>
+            <th>成本价</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td></td>
+            <td></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><a href="" class="a-hover-fill">删除</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="../img/wood.png" alt=""></td>
+            <td></td>
+            <td></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><a href="" class="a-hover-fill">删除</a></td>
+        </tr>
+    </table>
+</div>
+
+<div class="section-header">
+    <h3>产品图册</h3>
+</div>
+
+<div class="product-imgs">
+
+    <img src="../img/wood.png" alt="">
+    <img src="../img/wood.png" alt="">
+    <img src="../img/wood.png" alt="">
+</div>
+<div class="section-header">
+    <h3>产品附件</h3>
+</div>
+
+<div class="attachment">
+    <a href="">+添加附件</a>
+    <span>产品附件最大不超过30M，支持格式：PDF、Word、Excel、JPG、PNG、RAR、ZIP</span>
+</div>
+
+<div class="section-header">
+    <h3>产品详情</h3>
+</div>
+
+(调用控件)
+
+<div class="section-header">
+    <h3>折扣设置</h3>
+</div>
+
+
+<div class="tableWrap wid-50percent">
+    <table class="set-price-table">
+        <tr>
+            <th>客户级别</th>
+            <th>默认折扣</th>
+            <th>允许订货</th>
+            <!--<th>订货价</th>-->
+            <th>起订量</th>
+        </tr>
+
+        <tr>
+            <td>一级代理</td>
+            <td><input type="text" placeholder="70%"></td>
+            <td><input type="checkbox" ></td>
+            <!--<td><input type="text"></td>-->
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>二级代理</td>
+            <td><input type="text" placeholder="80%"></td>
+            <td><input type="checkbox" ></td>
+            <!--<td><input type="text"></td>-->
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>三级代理</td>
+            <td><input type="text"placeholder="90%"></td>
+            <td><input type="checkbox" ></td>
+            <!--<td><input type="text"></td>-->
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>特签代理</td>
+            <td><input type="text" placeholder="100%"></td>
+            <td><input type="checkbox" ></td>
+            <!--<td><input type="text"></td>-->
+            <td><input type="text"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="btn-group">
+    <button class="m-btn m-btn-red">保存</button>
+    <button class="m-btn m-btn-gray">取消</button>
+</div>
+
+
+</body>
+</html>

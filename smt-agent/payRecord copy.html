@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款记录</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <link rel="stylesheet" href="../css/pay-record.css"/>
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+
+<div class="modal account-modal" id="modal1" style="display: none;">
+
+    <div class="modal-header">选择收款账户 <div><i class="iconfont">&#xe615;</i></div></div>
+
+    <div class="modal-inner">
+        <table>
+            <tr>
+                <th>账户名称</th>
+                <th>开户行</th>
+                <th>开户账号</th>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+            <tr>
+                <td><input type="radio">汉瑞木业有限公司</td>
+                <td>工商银行长沙五一路支行</td>
+                <td>6229983762816717</td>
+            </tr>
+
+        </table>
+
+        <div class="pagefooter"><div class="pager">
+            共计
+            <span class="total">20</span>条 每页显示
+
+            <select name="itemNum">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+
+
+            条 第 <input type="text" placeholder="1">页
+            共 <span class="totalPage">2</span>页
+            <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+            <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+        </div></div>
+    </div>
+
+
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item" data-content="">订货管理</div>
+            <div class="nav-item " data-content="">订货单列表</div>
+            <div class="nav-item nav-item-active" data-content="">付款记录</div>
+        </div>
+    </div>
+
+
+
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner">
+    <table class="pay-record-table">
+        <tr>
+            <th ><input type="checkbox"/></th>
+            <th colspan="2">2016-11-22 14:22 订单号: 2314234124323</th>
+            <th>客户:王小磊</th>
+            <th></th>
+            <th></th>
+            <th>订单金额:￥99880.00</th>
+            <th class="money">已付款: ￥99880.00</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair2.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+    </table>
+
+    <table class="pay-record-table">
+        <tr>
+            <th ><input type="checkbox"/></th>
+            <th colspan="2">2016-11-22 14:22 订单号: 2314234124323</th>
+            <th>客户:王小磊</th>
+            <th></th>
+            <th></th>
+            <th>订单金额:￥99880.00</th>
+            <th class="money">已付款: ￥99880.00</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+    </table>
+
+    <table class="pay-record-table">
+        <tr>
+            <th ><input type="checkbox"/></th>
+            <th colspan="2">2016-11-22 14:22 订单号: 2314234124323</th>
+            <th>客户:王小磊</th>
+            <th></th>
+            <th></th>
+            <th>订单金额:￥99880.00</th>
+            <th class="money">已付款: ￥99880.00</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair2.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+    </table>
+
+    <table class="pay-record-table">
+        <tr>
+            <th ><input type="checkbox"/></th>
+            <th colspan="2">2016-11-22 14:22 订单号: 2314234124323</th>
+            <th>客户:王小磊</th>
+            <th></th>
+            <th></th>
+            <th>订单金额:￥99880.00</th>
+            <th class="money">已付款: ￥99880.00</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"/></td>
+            <td class="td-img"><img src="../img/chair2.jpg" alt=""/></td>
+            <td class="td-p-name">
+                <h5>汉瑞木业|实木黄花梨餐椅 时尚大方 结实耐用</h5>
+                <p>颜色分类:本色+黄花梨</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td>￥9988.00</td>
+            <td>10</td>
+            <td>￥99880.00</td>
+        </tr>
+    </table>
+
+</div>
+
+
+
+
+
+<div class="page-inner">
+    <!--<a href="" class="a-btn-fill">确认付款</a>-->
+    <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">返回</a>
+</div>
+
+
+<script>
+    $(function () {
+        var onlineBtn=$('#online-btn');
+        var offlineBtn=$('#offline-btn');
+
+        onlineBtn.on('click',function () {
+            $('#online-panel').show();
+            $('#offline-panel').hide();
+
+            onlineBtn.addClass('pay-tab-active');
+            offlineBtn.removeClass('pay-tab-active');
+
+        });
+
+        offlineBtn.on('click',function () {
+
+            $('#online-panel').hide();
+            $('#offline-panel').show();
+
+            onlineBtn.removeClass('pay-tab-active');
+            offlineBtn.addClass('pay-tab-active');
+
+        });
+
+        var weixinBtn=$('#weixinBtn');
+        var aliBtn=$('#alipayBtn');
+
+        weixinBtn.on('click',function () {
+            weixinBtn.addClass('pay-style-active');
+            aliBtn.removeClass('pay-style-active');
+
+        });
+
+        aliBtn.on('click',function () {
+            weixinBtn.removeClass('pay-style-active');
+            aliBtn.addClass('pay-style-active');
+
+        });
+
+    });
+</script>
+
+
+
+<!--<script src="js/smt-subpage.js"></script>-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

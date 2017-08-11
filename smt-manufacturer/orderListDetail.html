@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订货单详情</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">订货管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">订货单列表</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">订货单详情</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="pageHeader padding-bottom-0">
+    <div class="headerleft">
+        <h5 class="font-bold">订货单详情</h5>
+    </div>
+    <div class="headerright">
+        <a href="" class="a-btn-fill btn-gray a-btn-margin-right-0 ">修改</a>
+    </div>
+</div>
+
+
+
+
+<div class="tableWrap">
+
+    <table class="selllist-detail-table table-align-top table-small-img">
+        <tr>
+            <td colspan="8">
+                <div>
+                    <h5><span>客户:刘XX</span><span>单号:</span> <span>1223421348</span>
+                        <span class="red-text"><span class="date">2016-10-11 12:22</span>【已发货】</span></h5>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>序号</th>
+            <th>产品名称</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th>单价</th>
+
+            <th>金额小计</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""><span class="">美国进口白橡木抽屉</span> <br>木色 商品编码: 11828172</td>
+            <td>套</td><td>2</td>
+            <td >￥1200</td>
+            <td class="">￥2400</td>
+            <td></td>
+            <td><a href="javascript:void(0);" id="list-btn-1">报价清单</a></td>
+        </tr>
+
+        <tr class="tr-hover-none " id="material-list-1" style="display:none;">
+            <td colspan="8" style="padding-left: 20px;text-align:left;">
+                <br>
+                <h5 class="">物料清单</h5>
+                <br>
+                <table class="table-sub table-no-border">
+                    <tr>
+                        <td>序号</td>
+                        <td></td>
+                        <td>物料名称</td>
+                        <td>单位</td>
+                        <td>规格</td>
+                        <td>单价</td>
+                        <td>数量</td>
+                        <td>小计</td>
+                        <td class="align-center">备注</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>+ -</td>
+                        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                        <td>只</td>
+                        <td>800*600</td>
+                        <td>55</td>
+                        <td><input type="text"></td>
+                        <td>440</td>
+                        <td><input type="text" class="push-right"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>+ -</td>
+                        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                        <td>只</td>
+                        <td>800*600</td>
+                        <td>55</td>
+                        <td><input type="text"></td>
+                        <td>440</td>
+                        <td><input type="text" class="push-right"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>+ -</td>
+                        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                        <td>只</td>
+                        <td>800*600</td>
+                        <td>55</td>
+                        <td><input type="text"></td>
+                        <td>440</td>
+                        <td><input type="text" class="push-right"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>+ -</td>
+                        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                        <td>只</td>
+                        <td>800*600</td>
+                        <td>55</td>
+                        <td><input type="text"></td>
+                        <td>440</td>
+                        <td><input type="text" class="push-right"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>+ -</td>
+                        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                        <td>只</td>
+                        <td>800*600</td>
+                        <td>55</td>
+                        <td><input type="text"></td>
+                        <td>440</td>
+                        <td><input type="text" class="push-right"></td>
+                    </tr><tr>
+                    <td>6</td>
+                    <td>+ -</td>
+                    <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+                    <td>只</td>
+                    <td>800*600</td>
+                    <td>55</td>
+                    <td><input type="text"></td>
+                    <td>440</td>
+                    <td><input type="text" class="push-right"></td>
+                </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>折扣</td>
+                        <td><input type="text"></td>
+                        <td>应付总计</td>
+                        <td>¥ 888.88</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>年返 <input type="text" placeholder="" style="width: 50px;"> %</td>
+                        <td class="">¥ 800.00</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>最终优惠总计</td>
+                        <td class=" "><input type="text" class="align-center"></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="btns-div" style="float: none;">
+                    <a href="" class="a-btn-fill">保存</a>
+                    <a href="" class="a-btn-fill btn-gray">取消</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="../img/drawer.jpg" alt=""><span class="">美国进口白橡木抽屉</span> <br>木色 商品编码: 11828172</td>
+            <td>套</td><td>2</td>
+            <td >￥1200</td>
+
+            <td class="">￥2400</td>
+            <td></td>
+            <td><a href="javascript:void(0);" id="list-btn-1">报价清单</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="../img/drawer.jpg" alt=""><span class="">美国进口白橡木抽屉</span> <br>木色 商品编码: 11828172</td>
+            <td>套</td><td>2</td>
+            <td >￥1200</td>
+
+            <td class="">￥2400</td>
+            <td></td>
+            <td><a href="javascript:void(0);" id="list-btn-1">报价清单</a></td>
+        </tr>
+
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td>产品数量</td>
+            <td>6</td>
+            <td>订单金额</td>
+            <td>￥7200</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>应付金额</td>
+            <td class="">￥7200</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+
+                <p>【联系信息】姓名: 王XX 联系电话: 186 xxxx xxxx 送货日期: 2016-10-18 </p>
+                <p>【送货地址】湖南省 长沙市 岳麓区 xxxx xxxxx xxxxx</p>
+                <p>【附件信息】xxxxxx.doc   </p>
+                <p>【备注信息】暂无</p>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="page-inner" style="display:none;">
+
+    <div class="deliver-info">
+
+        <table class="no-border-bg-hover">
+            <tr>
+                <td> <span class=""><h5>送货信息</h5></span></td>
+                <td colspan="5"></td>
+            </tr>
+            <tr class=" ">
+                <td><span class="star">*</span>收货人姓名</td>
+                <td class="align-right">xxxx</td>
+                <td class="align-right"><span class="star">*</span>收货人电话</td>
+                <td>186-xxxx-xxxx</td>
+                <td>送货日期</td>
+                <td class="td-date">2016-10-18</td>
+            </tr>
+            <tr class=" ">
+                <td><span class="star">*</span>详细地址</td>
+                <td colspan="5">湖南省 长沙市 岳麓区 xxxx xxxxx xxxxx</td>
+            </tr>
+            <tr>
+                <td> <span class="font-bold">附件信息</span></td>
+                <td>附件1 附件2 附件3</td>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td> <span class="font-bold">备注</span></td>
+                <td colspan="5">xxxxx,xxxxx,xxxxx,</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div class="tableWrap">
+    <br>
+    <h5 class="font-bold">发货记录</h5>
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th>主图</th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>本次发货数量</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:<br>木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>2件</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:<br>木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>5件</td>
+        </tr>
+
+        <tr class="tr-hover-none">
+            <td colspan="4">
+                <div>
+                    <p>【状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态】<span class="red-text">待签收</span></p>
+                    <p>【发货信息】出库编号:1212312312, 日期: 2016-10-18</p>
+                    <p>【物流信息】发货日期: 2016-10-18, 物流公司: 顺丰快递, 物流单号:1112 1112 5587 , <a href="" class="a-red">物流跟踪  &nbsp;<i class="iconfont">&#xe619;</i></a></p>
+
+                </div>
+            </td>
+            <td></td>
+        </tr>
+
+
+    </table>
+
+
+    <table class="table-small-img">
+        <tr>
+            <th>序号</th>
+            <th>主图</th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>本次发货数量</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><img src="../img/drawer.jpg" alt=""></td>
+            <td>P1221312321</td>
+            <td>全实木北欧风格五斗柜 【颜色:<br>木色, 尺寸:5斗, 材质:泰橡】</td>
+            <td>2件</td>
+        </tr>
+        <tr class="tr-hover-none">
+            <td colspan="4">
+                <div>
+                    <p>【状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态】<span class="red-text">待签收</span></p>
+                    <p>【发货信息】出库编号:1212312312, 日期: 2016-10-18</p>
+                    <p>【物流信息】发货日期: 2016-10-18, 物流公司: 顺丰快递, 物流单号:1112 1112 5587 , <a href="" class="a-red">物流跟踪  &nbsp;<i class="iconfont">&#xe619;</i></a></p>
+
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="page-inner">
+    <h5 class="font-bold">付款记录</h5>
+
+    <table class="table-sub">
+
+        <tr>
+            <th>序号</th>
+            <th>支付流水号</th>
+            <th>时间</th>
+            <th>付款金额</th>
+            <th>支付方式</th>
+            <th>资金账户</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>2012876212</td>
+            <td>2016-10-09</td>
+            <td class="">￥239983</td>
+            <td>转账</td>
+            <td>预付款账户</td>
+            <td>已收款</td>
+            <td><a href="">删除</a></td>
+        </tr>
+
+
+    </table>
+
+    <!--<a href="orderList.html"  target="myiframe" class="a-btn-fill btn-gray a-btn-margin-left-0">-->
+        <!--返回-->
+    <!--</a>-->
+
+    <div class="btns-div">
+        <a href="javascript:;" onClick="javascript:history.back(-1);" target="myiframe" class="a-btn-fill btn-gray">返回</a>
+
+    </div>
+</div>
+
+<script>
+    $('#list-btn-1').click(function () {
+        $('#material-list-1').toggle();
+    })
+</script>
+
+<!--<script src="js/smt-subpage.js"></script>-->
+</body>
+</html>

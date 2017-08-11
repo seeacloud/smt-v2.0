@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增成品采购单</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/supplier.css"/>
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">成品管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">成品采购订单</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">新增成品采购单</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+
+
+<!--content start-->
+<div class="pageHeader">
+    <div class="headerleft">
+        <span class="with-star">供应商</span> <input type="text" placeholder="调用供应商选择控件" style="">
+    </div>
+</div>
+
+<div class="tableWrap">
+    <table class="add-order-table">
+        <tr>
+            <th>序号</th>
+            <th></th>
+            <th>产品编码</th>
+            <th>产品名称</th>
+            <th>规格</th>
+            <th>单位</th>
+            <th>采购数量</th>
+            <th>采购单价(元)</th>
+            <th class="sum">小计(元)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td colspan="2"><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div>
+            </td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td><input type="text"/></td>
+            <td>139.00</td>
+            <td class="sum">139.00</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="">+</a><a href="">-</a></td>
+            <td colspan="2"><div class="input-group" id="clientNameInput"><input type="text" placeholder="请输入产品信息...">
+                <span class="more" >&middot;&middot;&middot;</span></div>
+            </td>
+            <td><input type="text" ></td>
+            <td>件</td>
+            <td><input type="text"/></td>
+            <td>139.00</td>
+            <td class="sum">139.00</td>
+        </tr>
+
+
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="align-right">总计</td>
+            <td class="font-bold">￥12999</td>
+        </tr>
+        <tr class="tr-no-border">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="align-right">应付总计</td>
+            <td><input type="text" placeholder="￥" class="money align-center"></td>
+        </tr>
+
+    </table>
+
+    
+    <div class="deliver-info">
+
+        <table class="no-border-bg-hover table-normal">
+
+            <tr class=" ">
+                <td><span>日期</span></td>
+                <td ><input type="text" placeholder="调用日期控件"></td>
+                <td ><span>备注</span></td>
+                <td rowspan="2" style="vertical-align: top;">
+                    <textarea name="" id="" cols="30" rows="6" style="width:100%;"></textarea>
+                </td>
+            </tr>
+            <tr class=" ">
+                <td><span class="with-star">采购订单号</span></td>
+                <td><input type="text"/></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>采购员</td>
+                <td><input type="text"/></td>
+                <td>制单人</td>
+                <td><input type="text"/></td>
+            </tr>
+
+           
+        </table>
+    </div>
+
+
+</div>
+
+    <div class="btn-group-wrap">
+        <a href="" class="a-btn-fill">保存</a>
+        <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">取消</a>
+    </div>
+
+
+
+
+
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

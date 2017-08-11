@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退货单列表</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+
+<div class="modal" id="return-money-1" style="display: none;width: 400px;">
+    <div class="modal-header">确认收款 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>是否确认收到xxxxxx退货单的退款? 本操作不可恢复!</p>
+    </div>
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-manufacturer/index.html" target="_parent">[切换到生产商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="cart.html" target="myiframe"><i class="iconfont cart">&#xe611;</i> 购物车 <span>22件</span></a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item" data-content="">订货管理</div>
+            <div class="nav-item nav-item-active" data-content="">退货单列表</div>
+            <!--<div class="nav-item nav-item-active" data-content="">新增产品</div>-->
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="pageHeader">
+    <div class="headerleft">
+        <!--<input type="radio" name="sell-list-radio" radiogroup="group1"><span>按产品展示</span>-->
+        <!--<input type="radio" name="sell-list-radio" radiogroup="group1"> <span>按订单展示</span>-->
+    </div>
+    <div class="headerright">
+        <a href="addReturnOrder.html" target="myiframe" class="a-btn-fill right-margin-0">增加</a>
+    </div>
+</div>
+
+
+<div class="tableWrap">
+    <table class="table-selllist-listview">
+        <tr>
+            <th>序号</th>
+            <th>单号</th>
+            <th>客户名称</th>
+            <th>金额</th>
+            <th>审核状态</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+            <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+                <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+                <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+                <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+                <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><span class="font-bold">MY-0092812-1292</span><br>
+                <span class="date">2016-10-11 15:22</span></td>
+            <td>XX木业有限公司</td>
+            <td class="money">￥1200.00</td>
+            <td>未审核</td>
+            <td><a href="returnListDetail.html" target="myiframe">详情</a><br><a href="#return-money-1" rel="modal:open">确认收款</a></td>
+        </tr>
+    </table>
+</div>
+
+<div class="page-inner">
+    <div class="pagefooter">
+    <div class="footerleft"></div>
+    <div class="footerright">
+        <div class="pager">
+            共计
+            <span class="total">20</span>条 每页显示
+
+            <select name="itemNum">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+
+
+            条 第 <input type="text" placeholder="1">页
+            共 <span class="totalPage">2</span>页
+            <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+            <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+        </div>
+    </div>
+</div></div>
+
+
+
+
+<script src="../js/smt-subpage.js"></script>
+</body>
+</html>

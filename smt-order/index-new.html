@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>山木通订货版</title>
+    <link rel="stylesheet" href="../css/indexStyle.css"/>
+    <link rel="stylesheet" href="../iconfont/iconfont.css"/>
+</head>
+<body>
+
+<div id="app">
+    <div class="main-con" id="main-con">
+        <iframe src="home.html" id="iframe" name="myiframe" frameborder="0"></iframe>
+
+        </iframe>
+        <div class="side-menu">
+            <div class="logo-con">
+                <img src="../img/smt-order.png" alt=""/>
+            </div>
+            <div v-for="(item, index) in menuItems" class="m-item" :key="index" :id="item.sID"
+                 @mouseenter="mouseOverMenuItem($event, item.sID)" @mouseleave="mLeave()" @click="mClick(item.sID)">
+                <a :href="item.link" target="myiframe" class="a-main">
+                    <i class="iconfont" v-html="item.code"></i>
+                    <span class="m-title">{{item.name}}</span>
+                </a>
+                <div class="sub-menu" v-show="subID===item.sID">
+                    <div v-for="(group, index) in item.subgroups" :key="index" class="sub-group">
+                        <div v-for="(sitem, index) in group" :key="index" class="a-con">
+                            <a :href="sitem.l" class="a-sub" target="myiframe">{{sitem.n}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery1.12.1.min.js"></script>
+<script src="../js/vue.min.js"></script>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            subID: '',
+            activeID: '',
+            menuItems: [
+                {
+                    name: '产品管理', code: '&#xe602;', link: 'productList.html', sID: 'product', subgroups: [
+                    [
+                        {n: '产品管理', l: 'javascript:void(0)'},
+                        {n: '产品列表', l: 'productList.html'},
+                        {n: '平台产品类别', l: 'category.html'},
+                        {n: '厂家产品类别', l: 'category-M.html'},
+                        {n: '供应商管理', l: 'supplierList.html'},
+                        {n: '产品采购订单', l: 'productOrder.html'},
+                        {n: '原料采购订单', l: 'materialOrder.html'}
+                    ],
+                    [
+                        {n: '产品管理', l: 'javascript:void(0)'},
+                        {n: '产品列表', l: 'productList.html'},
+                        {n: '平台产品类别', l: 'category.html'},
+                        {n: '产品采购订单', l: 'productOrder.html'},
+                        {n: '原料采购订单', l: 'materialOrder.html'}
+                    ],
+                    [
+                        {n: '产品管理', l: 'javascript:void(0)'},
+                        {n: '产品列表', l: 'productList.html'},
+                        {n: '平台产品类别', l: 'category.html'},
+                        {n: '厂家产品类别', l: 'category-M.html'},
+                        {n: '供应商管理', l: 'supplierList.html'},
+                        {n: '产品采购订单', l: 'productOrder.html'},
+                        {n: '原料采购订单', l: 'materialOrder.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '订货管理', code: '&#xe600;', link: 'home.html', sID: 'order', subgroups: [
+                    [
+                        {n: '订货管理', l: 'javascript:void(0)'},
+                        {n: '订货单', l: 'orderList.html'},
+                        {n: '退货单', l: 'returnList-list-view.html'}
+                    ],
+                    [
+                        {n: '订货管理', l: 'javascript:void(0)'},
+                        {n: '订货单', l: 'orderList.html'},
+                        {n: '退货单', l: 'returnList-list-view.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '产品促销', code: '&#xe622;', link: 'home.html', sID: 'promotion', subgroups: [
+                    [
+                        {n: '产品促销', l: 'javascript(0)'},
+                        {n: '广告发布', l: 'adsList.html'},
+                        {n: '产品促销', l: 'productPromotion.html'},
+                        {n: '订单促销', l: 'orderPromotion.html'},
+                        {n: '组合促销', l: 'combinePromotion.html'},
+                        {n: '秒杀管理', l: 'miaosha.html'},
+                        {n: '幸运大转盘', l: 'luckyWheel.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '生产管理', code: '&#xe617;', link: 'home.html', sID: 'produce', subgroups: [
+                    [
+                        {n: '生产管理', l: 'javascript:void(0)'},
+                        {n: '生产单列表', l: 'produceList.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '资金管理', code: '&#xe604;', link: 'home.html', sID: 'money', subgroups: [
+                    [
+                        {n: '资金管理', l: 'javascript:void(0)'},
+                        {n: '资金账户', l: 'account.html'},
+                        {n: '收款确认', l: 'receiptConfirm.html'},
+                        {n: '收款账户', l: 'bankInfo.html'},
+                        {n: '收支明细', l: 'receiptAndPayment.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '库存管理', code: '&#xe831;', link: 'home.html', sID: 'stock', subgroups: [
+                    [
+                        {n: '库存管理', l: 'javascript:void(0)'},
+                        {n: '库存状况', l: 'stockList.html'},
+                        {n: '入库单', l: 'stockIn.html'},
+                        {n: '出库单', l: 'stockOut.html'},
+                        {n: '盘点单', l: 'takeStock.html'},
+                        {n: '出入库明细', l: 'inOutList.html'},
+                        {n: '仓库设置', l: 'stockSetting.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '报表', code: '&#xe605;', link: 'home.html', sID: 'report', subgroups: [
+                    [
+                        {n: '报表', l: 'javascript:void(0)'},
+                        {n: '订单报表', l: 'reportOrder.html'},
+                        {n: '库存报表', l: 'reportInventory.html'},
+                        {n: '出货报表', l: 'reportDelivery.html'}
+                    ]
+                ]
+                },
+                {
+                    name: '通知', code: '&#xe608;', link: 'home.html', sID: 'notice', subgroups: [
+                    [
+                        {n: '通知', l: 'javascript:void(0)'},
+                        {n: '通知列表', l: 'notificationList.html'}
+                    ]
+                ]
+                }
+            ]
+        },
+        methods: {
+            mLeave: function () {
+                this.subID = ''
+            },
+            mClick: function (mID) {
+                this.activeID = mID
+                console.log('active id:', this.activeID)
+                $('.m-item').removeClass('m-item-active')
+                $('#' + this.activeID).addClass('m-item-active')
+            },
+            mouseOverMenuItem: function (evt, sID) {
+                this.subID = sID
+                subGroups = $(evt.target).find('.sub-group')
+                var hAry = []
+
+                function getMax(ary) {
+                    var max = 0
+                    for (var k = 0; k < ary.length; k++) {
+                        if (ary[k] > max) {
+                            max = ary[k]
+                        }
+                    }
+                    return (max)
+                }
+
+                setTimeout(function () {
+                    for (var i = 0; i < subGroups.length; i++) {
+                        hAry.push($(subGroups[i]).height())
+                    }
+                    for (var j = 0; j < subGroups.length; j++) {
+                        subGroups[j].style.height = getMax(hAry) + 'px'
+                    }
+                }, 10)
+
+            }
+        }
+    })
+</script>
+
+<script>
+    $(function () {
+
+        // 设置主容器高度等于屏幕高度
+        $('#main-con').height($(document).height() + 'px')
+
+        //设置iframe的宽度和高
+        $('#iframe').height($(document).height() + 'px')
+        $('#iframe').width($(document).width() - 100 + 'px')
+
+        //窗口尺寸改变时，重置容器和iframe尺寸
+        $(window).on('resize', function () {
+            $('#main-con').height($(document).height() + 'px')
+            $('#iframe').height($(document).height() + 'px')
+            $('#iframe').width($(document).width() - 100 + 'px')
+        })
+
+        //设置子菜单的尺寸
+        var subMenus = $('.sub-menu')
+        var subGroupNum = []
+        for (var i = 0; i < subMenus.length; i++) {
+            var n = $(subMenus[i]).find('.sub-group').length
+            subGroupNum.push(n)
+            console.log('num is:', n)
+        }
+
+        for (var i = 0; i < subMenus.length; i++) {
+            $(subMenus[i]).width(subGroupNum[i] * 151 + 'px')
+        }
+
+//        设置菜单底对齐
+        $('#stock .sub-menu').addClass('align-btm')
+        $('#report .sub-menu').addClass('align-btm')
+        $('#notice .sub-menu').addClass('align-btm')
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

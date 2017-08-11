@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>付款</title>
+
+    <link rel="stylesheet" href="../css/pay-antong.css">
+</head>
+<body>
+
+
+
+
+
+
+<!--content start-->
+
+<div>
+    <div class="pay-header-wrap">
+        
+     <div class="pay-header-inner">   <div style="padding-right:20px; display:block;"><h5>订单号:2131231231</h5>
+        <div class="pay-num">应付金额: <span>￥55000</span>
+            <span class="push-right">尚未付款金额:<span class="money">￥55000</span></span>
+        </div>
+    </div></div>
+    
+    </div>
+</div>
+
+<!--<div class="order-pay">-->
+        <!--<div style="padding-right:20px; display:block;"><h5>订单号:2131231231</h5>-->
+            <!--<div class="pay-num">应付金额: <span>￥55000</span>-->
+                <!--<span class="push-right">尚未付款金额:<span class="money">￥55000</span></span>-->
+            <!--</div>-->
+        <!--</div>-->
+<!--</div>-->
+
+
+
+<div class="page-inner " style="padding-top:0;">
+    <h5 style="font-size:16px;">使用账户余额</h5>
+    <br>
+
+    <div class="pay-by-1">
+        <div class="pay-way">
+            预付款账户 <input type="text" value="100.50"> <div class="money-left"><p>当前余额</p><p>￥1118.88</p></div>
+        </div>
+        <div class="pay-way">
+            返点账户 <input type="text" value="100.50"> <div class="money-left"><p>当前余额</p><p>￥0.00</p></div>
+        </div>
+    </div>
+
+    <div class="pay-wrap">
+
+            <div class="pay-tabs"><div class="pay-tab pay-tab-active" id="online-btn">在线支付</div>
+                <div class="pay-tab" id="offline-btn">线下支付</div></div>
+        <div class="" id="online-panel" style="display:block;">
+            <div class="pay-row"><div class="pay-label" >选择支付方式</div> <div>
+                <div class="pay-style pay-style-active" id="alipayBtn"><img src="../img/alipay.png" alt=""></div>
+                <div class="pay-style " id="weixinBtn"><img src="../img/weixinpay.png" alt=""></div>
+            </div>
+            </div>
+
+            <div class="pay-row" style="border: none;"><div class="pay-label" style="font-size:14px;">支付金额</div> <div></div>
+                <input type="text" value="0.00">元</div>
+        </div>
+        <div class="" id="offline-panel" style="display:none;">
+
+
+            <div class="pay-row" ><div class="pay-label" style="font-size:14px;">付款金额</div> <div></div>
+                <input type="text" value="0.00">元</div>
+
+            <a href="#modal1" rel="modal:open" class="account-link a-red">+选择收款账户</a>
+
+            <div class="pay-row-2" style="border: none;"><div class="pay-label">账户名称</div>
+                <div><input type="text" placeholder="汉瑞木业有限公司"></div></div>
+
+            <div class="pay-row-2" style="border: none;"><div class="pay-label">付款日期</div>
+                <div><input type="text" placeholder=""></div></div>
+
+            <div class="pay-row-2" style="border: none;"><div class="pay-label">开户银行</div>
+                <div><input type="text" placeholder="中国银行深圳南山支行"></div></div>
+
+            <div class="pay-row-2 pay-row-textarea" style="border: none;"><div class="pay-label">备注</div>
+                <div class="textarea-wrap"><textarea name="" id="" cols="" rows=""></textarea></div></div>
+
+            <div class="pay-row-2" style="border: none;"><div class="pay-label">开户账户</div>
+                <div><input type="text" placeholder="62299826152121"></div></div>
+
+
+            <div class="attachment-pay">
+                <a href="javascript:;">+上传附件</a>
+                <div>仅支持JPG//PNG//Word//Excel//Txt格式，大小不超过4M</div>
+            </div>
+
+            <p>付款凭证.jpg  (111.8KB) <a href="javascript:;">删除</a></p>
+        </div>
+    </div>
+
+
+    
+    
+
+</div>
+
+<div class="page-inner">
+    <a href="" class="a-btn-fill">确认付款</a>
+    <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">返回</a>
+</div>
+
+
+<script>
+    $(function () {
+        var onlineBtn=$('#online-btn');
+        var offlineBtn=$('#offline-btn');
+
+        onlineBtn.on('click',function () {
+            $('#online-panel').show();
+            $('#offline-panel').hide();
+
+            onlineBtn.addClass('pay-tab-active');
+            offlineBtn.removeClass('pay-tab-active');
+
+        });
+
+        offlineBtn.on('click',function () {
+
+            $('#online-panel').hide();
+            $('#offline-panel').show();
+
+            onlineBtn.removeClass('pay-tab-active');
+            offlineBtn.addClass('pay-tab-active');
+
+        });
+
+        var weixinBtn=$('#weixinBtn');
+        var aliBtn=$('#alipayBtn');
+
+        weixinBtn.on('click',function () {
+            weixinBtn.addClass('pay-style-active');
+            aliBtn.removeClass('pay-style-active');
+
+        });
+
+        aliBtn.on('click',function () {
+            weixinBtn.removeClass('pay-style-active');
+            aliBtn.addClass('pay-style-active');
+
+        });
+
+    });
+</script>
+
+
+
+<!--<script src="js/smt-subpage.js"></script>-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

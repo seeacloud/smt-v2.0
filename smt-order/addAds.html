@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广告新增</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/supplier.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+
+</head>
+<body>
+
+<!--弹出框-->
+<div id="delete" style="display: none;width:300px;">
+
+    <div class="modal-header">确认删除
+        <div><i class="iconfont">&#xe615;</i></div>
+    </div>
+    <div class="modal-inner">
+        <p>确认删除该成品采购订单 ？</p>
+    </div>
+
+    <div class="btns-div">
+        <a href="" rel="modal:close" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">产品促销</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">广告发布</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">广告新增</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner">
+
+    <h5 class="font-bold">广告信息</h5>
+    <br>
+
+    <div class="info-item">
+        <span class="info-item-title with-star">广告标题</span> <input type="text"/>
+    </div>
+    <div class="info-item">
+        <span class="info-item-title with-star">链接地址</span> <input type="text" placeholder="调用选择控件">
+    </div>
+
+    <div class="ads-box">
+            <div class="add-img-btn">
+                <div class="add">+</div>
+                上传广告图片
+            </div>
+    </div>
+    <div class="info-item" style="color:#aaa;">
+        <span class="info-item-title"></span>
+        仅支持.jpg.png.bmp格式，文件小于2M，广告图片尺寸720*288像素
+    </div>
+
+
+</div>
+
+
+<div class="page-inner">
+    <div class="btns-div"><a class="a-btn-fill">保存</a>
+        <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">取消</a></div>
+</div>
+</body>
+</html>

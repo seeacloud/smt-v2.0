@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>厂家-order-list</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+
+
+<link rel="stylesheet" href="../css/jquery.modal.css">
+<script src="../js/jquery1.12.1.min.js"></script>
+<script src="../js/jquery.modal.js"></script>
+<!--作废弹出框-->
+<div id="modal-invalid" style="display: none;">
+
+    <div class="modal-header">订货单作废 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>确认删除该订货单? 本操作不可恢复!</p>
+        <p>请输入作废理由:</p><br>
+
+        <textarea name="" id="" cols="" rows="5"></textarea>
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+
+
+<div class="topNav">
+    <div class="topbar" >
+        <p>汉瑞木业有限公司 | 云管理平台</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+    <div class="nav">
+        <!--<div class="navlistWrap">-->
+
+            <!--<div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item" data-content="">销售管理</div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">销售单列表</div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">新增产品</div>-->
+        <!--</div>-->
+        
+        <div class="navlistWrap"><ul>
+            <li><a href="">首页</a></li>
+            <li><i class="iconfont">&#xe60d;</i></li>
+            <li><a href="">订货管理</a></li>
+            <li><i class="iconfont">&#xe60d;</i></li>
+
+            <li><a href="">订货单列表</a></li>
+            <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+            <!--<li><a href="">增加产品</a></li>-->
+        </ul></div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+<div class="pageHeader">
+    <div class="headerleft">
+
+        <ul class="total-tabs">
+            <li class="tab-active"><a href="javascript:void(0);">全部</a></li>
+            <li class="seperator"></li>
+
+            <li><a href="javascript:void(0);">待审核</a></li>
+            <li class="seperator"></li>
+            <li><a href="javascript:void(0);">待发货</a></li>
+            <li class="seperator"></li>
+            <li><a href="javascript:void(0);">待收货</a></li>
+            <li class="seperator"></li>
+            <li><a href="javascript:void(0);">已完成</a></li>
+        </ul>
+
+    </div>
+    <div class="headerright">
+        <a href="" class="a-red"><i class="iconfont">&#xe612;</i>导入</a>
+        <a href="addMoreOrder.html"  target="myiframe" class=" a-red "> 补货</a>
+
+        <a href="addOrder.html" target="myiframe" class="a-btn-fill right-margin-0 ">增加</a>
+
+    </div>
+</div>
+
+   <div class="tableWrap">
+
+       <table class="sell-list-table table-title">
+           <tr class="tr-hover-none tr-page-header" >
+               <td></td>
+               <td>产品</td>
+               <td></td>
+               <td>单价</td>
+               <td>数量</td>
+               <td>产品操作</td>
+               <td>金额</td>
+               <td>交易状态</td>
+               <td>操作</td>
+           </tr>
+       </table>
+
+
+       <table class="sell-list-table">
+           <tr>
+               <th><input type="checkbox"></th>
+               <th colspan="5">
+                   <ul>
+                       <li>2016-10-21</li>
+                       <li> 订单号: 2298 9932 3372</li><li>客户名称: xxxx有限公司</li>
+                       <li class="order-done">【订单完成】</li>
+                   </ul>
+               </th>
+               <th></th>
+               <th></th>
+               <th> <a href="#modal-invalid" rel="modal:open"><i class="iconfont">&#xe614;</i></a></th>
+           </tr>
+           <tr id="tr-1">
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-1.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发 厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥600</span><br><span >￥550</span></td>
+               <td>2</td>
+               <td class="track-td">
+                   <a href="toProduce.html" target="myiframe">转生产</a><br>已发货<a href="" class="a-red order-track"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a><br>
+                   </td>
+               <td class="td-combine"><span class="total-money">￥654400</span><br><span>已收款: ￥34400</span></td>
+               <td class="td-combine"><span class="font-bold">已发货</span> <br><a href="orderListDetail.html" target="myiframe">订单详情</a></td>
+               <td class="td-combine"><a href="javascript:void(0);" class="" id="btn-1">收款</a><br><a href="addReturnOrder.html" target="myiframe">退货</a><br>
+
+
+                   <a href="orderCheck.html" target="myiframe">订单审核</a><br><a href="financeCheck.html" target="myiframe">财务审核</a><br>
+                   <a href="delivery.html" target="myiframe">发货</a>
+               </td>
+           </tr>
+       </table>
+
+       <div class="get-money" id="list-1-div">
+           <div>
+               <h5>使用资金账户付款</h5>
+               <p><span>预付款账户</span><input type="text" placeholder="0">当前账户余额 12,000,00</p>
+               <p><span>返点账户</span><input type="text" placeholder="0">当前账户余额 0,00</p>
+               <h5>代理商已经线下付款</h5>
+               <p><span>付款日期</span><input type="text" placeholder="(开发人员调用日期控件)"></p>
+               <p><span>付款金额</span><input type="text"></p>
+               <p><span>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</span><input type="text" placeholder=""></p>
+               <p><span>附&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件</span> <a href="" class="a-btn-fill btn-gray">上传附件</a>建议上传付款凭证,如汇款单等;附件格式: jpg/png/gif/word/excel 大小不超过3M</p>
+               <div class="attachment-div">
+                   <p>drawer.jpg (233.52 KB) <a href="">删除</a></p>
+               </div>
+           </div>
+           <div class="">
+               <a href="" class="a-btn-fill a-btn-margin-left-0 a-btn-sub">保存</a><a href="javascript:toggleGetMoney();" class="a-btn-fill btn-gray" id="btn-cancel">取消</a>
+           </div>
+       </div>
+       <table class="sell-list-table">
+
+
+           <tr>
+               <th><input type="checkbox"></th>
+               <th colspan="5">
+                   <ul class="th-ul">
+                       <li>2016-10-21</li>
+                       <li> 订单号: 2298 9932 3372</li><li>客户名称: xxxx有限公司</li>
+                       <li class="order-done">【订单完成】</li>
+                   </ul>
+               </th>
+               <th></th>
+               <th></th>
+               <th> <a href="#modal-invalid" rel="modal:open"><i class="iconfont">&#xe614;</i></a></th>
+           </tr>
+           <tr>
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-2.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥60000</span><br><span >￥55000</span></td>
+               <td>2</td>
+               <td><a href="reviewSettleList.html" target="myiframe"  class="a-btn-fill-mini">确认结算</a><br>木工生产完成<a href="" class="a-red"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a> <br>
+                   </td>
+               <td class="td-combine"><span class="total-money">￥88800</span><br><span>已收款: ￥8668</span></td>
+               <td class="td-combine"><span class="font-bold">生产中</span><br> <a href="orderListDetail.html" target="myiframe">订单详情</a><br>
+                   <a href="" class="logistic-track">物流跟踪</a></td>
+               <td class="td-combine"><a href="javascript:toggleGetMoney();" class="get-money-btn">收款</a><br><a href="addReturnOrder.html" target="myiframe">退货</a><br>
+
+                   <a href="orderCheck.html" target="myiframe">订单审核</a><br><a href="financeCheck.html" target="myiframe">财务审核</a><br>
+                   <a href="delivery.html" target="myiframe">发货</a>
+               </td>
+           </tr>
+           <tr>
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-3.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                       <li><span class="sale">特价</span></li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥2000</span><br><span >￥550</span></td>
+               <td>2</td>
+               <td ><a href="reviewSettleList.html" target="myiframe"  class="a-btn-fill-mini">确认结算</a><br>木工生产完成<a href="" class="a-red"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a> <br></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+           </tr>
+           <tr>
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-4.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥6000</span><br><span >￥550</span></td>
+               <td>2</td>
+               <td ><a href="reviewSettleList.html" target="myiframe"  class="a-btn-fill-mini">确认结算</a><br>木工生产完成<a href="" class="a-red"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a> <br></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+           </tr>
+       </table>
+
+       <!--table end-->
+
+       <table class="sell-list-table">
+
+
+
+           <tr>
+               <th><input type="checkbox"></th>
+               <th colspan="5">
+                   <ul>
+                       <li>2016-10-21</li>
+                       <li> 订单号: 2298 9932 3372</li><li>客户名称: xxxx有限公司</li>
+                       <li class="order-done">【订单完成】</li>
+                   </ul>
+               </th>
+               <th></th>
+               <th></th>
+               <th> <a href="#modal-invalid" rel="modal:open"><i class="iconfont">&#xe614;</i></a></th>
+           </tr>
+           <tr>
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-5.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                       <li><span class="sale">特价</span></li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥600</span><br><span >￥550</span></td>
+               <td>2</td>
+               <td >已发货<a href="" class="a-red"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a> <br></td>
+               <td class="td-combine"><span class="total-money">￥6549983400</span><br><span>已收款: ￥248668</span></td>
+               <td class="td-combine"><span class="font-bold">已收款</span><br> <a href="orderListDetail.html" target="myiframe">订单详情</a>
+               <td class="td-combine"><a href="javascript:toggleGetMoney();" class="get-money-btn">收款</a><br><a href="addReturnOrder.html" target="myiframe">退货</a><br>
+               <a href="">作废</a><br><a href="orderCheck.html" target="myiframe">订单审核</a><br><a href="financeCheck.html" target="myiframe">财务审核</a><br>
+               <a href="delivery.html" target="myiframe">发货</a></td>
+           </tr>
+           <tr>
+               <td><input type="checkbox"></td>
+               <td><img src="../img/s-6.jpg" alt=""></td>
+               <td>
+                   <ul>
+                       <li>白橡木【美国进口】</li>
+                       <li>厂家直销实木楼梯扶手立柱踏步板阳台栏杆护栏可烤漆批发</li>
+                       <li><span class="sale">特价</span></li>
+                   </ul>
+               </td>
+               <td><span class="old-price">￥600</span><br><span >￥550</span></td>
+               <td>2</td>
+               <td >木工生产完成<a href="" class="a-red"> 跟踪
+                   <i class="iconfont">&#xe610;</i></a><br><a href="settleList.html" target="myiframe">生成结算单</a> <br></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+               <td class="td-combine"></td>
+           </tr>
+
+       </table>
+
+
+
+       <table class="sell-list-table footer-table">
+
+
+
+           <tr class="tr-hover-none tr-no-border">
+               <th colspan="2"><input type="checkbox"><a href="" class="">批量确认送货</a></th>
+               <th></th>
+               <th colspan="6" class="padding-right-0">
+                   <div class="pager">
+                   共计
+                   <span class="total">20</span>条 每页显示
+
+                   <select name="itemNum">
+                       <option value="10">10</option>
+                       <option value="20">20</option>
+                       <option value="50">50</option>
+                       <option value="100">100</option>
+                   </select>
+
+
+                   条 第 <input type="text" placeholder="1">页
+                   共 <span class="totalPage">2</span>页
+                   <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                   <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+               </div></th>
+           </tr>
+
+
+
+
+
+
+       </table>
+       
+   </div>
+
+
+
+<script>
+    //收款操作开始
+
+//    function toggleGetMoney()
+//    {
+//        var oGet=document.getElementsByClassName('get-money-btn')[0];
+//        var oGetMoneyPanel=document.getElementsByClassName('get-money')[0];
+//
+//        if(oGetMoneyPanel.style.display=='none')
+//        {
+//            console.log('none');
+//            oGetMoneyPanel.style.display='block';
+//        }else
+//        {
+//            console.log('block');
+//            oGetMoneyPanel.style.display='none';
+//        }
+//    }
+//
+
+    $('#btn-1').click(function () {
+        if($('#tr-1').hasClass('tr-active'))
+        {
+            $('#tr-1').removeClass('tr-active');
+            $('#tr-1').prev().removeClass('bdr-btm');
+            $('#list-1-div').hide();
+
+        }else
+        {
+            $('#tr-1').addClass('tr-active');
+            $('#tr-1').prev().addClass('bdr-btm');
+            $('#list-1-div').show();
+        }
+    })
+
+
+    //收款操作结束
+
+</script>
+
+
+<script>
+    var trackBtns=document.getElementsByClassName('order-track');
+    console.log(trackBtns);
+
+    var trackTd=document.getElementsByClassName('track-td');
+
+    var trackPanelOn=false;
+
+    var logisticBtns=document.getElementsByClassName('logistic-track');
+
+
+
+
+    for(var i=0;i<trackBtns.length;i++)
+    {
+        trackBtns[i].onmouseover=function () {
+            console.log(this.parentNode,this.offsetLeft,this.offsetTop);
+            if(!trackPanelOn)
+            {
+                this.classList.add("order-track-arrow");
+                var _this=this;
+                trackPanelOn=true;
+                var trackInfoPanel=document.createElement('div');
+                trackInfoPanel.className='track-info-panel';
+//                trackInfoPanel.innerText='木工生产中';
+
+                trackInfoPanel.innerHTML="<p>油漆生产中 <br><span>2016-10-18 14:22</span></p>" +
+                        "<p>木工生产中 <br><span>2016-10-18 15:11</span></p>" +
+                        "<p>已下单 <br><span>2016-10-18 16:22</span></p>"
+                this.parentNode.appendChild(trackInfoPanel);
+                console.log('panel width:',trackInfoPanel.offsetWidth);
+                trackInfoPanel.style.left=this.offsetLeft-trackInfoPanel.offsetWidth/2+20+'px';
+                trackInfoPanel.style.top=this.offsetTop+21+'px';
+                trackInfoPanel.onmouseover=function () {
+                }
+                trackInfoPanel.onmouseout=function () {
+                    console.log("_this is:",_this);
+                    _this.classList.remove('order-track-arrow');
+                    console.log('mouse out from', this);
+                    this.style.display='none';
+                    trackPanelOn=false;
+                }
+            }
+
+
+        }
+    }
+
+
+    var logisticOn=false;
+
+    logisticBtns[0].onmouseover=function () {
+        if(!logisticOn)
+        {
+            logisticOn=true;
+            console.log('mouse on logistc:', this);
+            this.classList.add('order-track-arrow');
+
+            var panel = document.createElement('div');
+            panel.classList.add('track-info-panel');
+            panel.style.position = 'absolute';
+
+            panel.innerHTML = '<p>已到长沙中转站 2016-10-18 14:22</p>'
+//            panel.style.left=this.pageXOffset-50+'px';
+//            panel.style.top=this.pageYOffset+15+'px';
+            panel.style.marginTop=5+'px';
+            console.log('panel.offsetWidth',panel.style.width);
+            panel.style.marginLeft=panel.offsetWidth+'px';
+            this.parentNode.appendChild(panel);
+            var aBtn=this;
+
+            panel.onmouseout=function () {
+                this.style.display='none';
+                aBtn.classList.remove('order-track-arrow');
+                logisticOn=false;
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+</script>
+
+
+
+<!--<script src="js/smt-subpage.js"></script>-->
+</body>
+</html>

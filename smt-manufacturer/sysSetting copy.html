@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>系统设置</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/sysStyle.css"/>
+    <link rel="stylesheet" href="../css/widgetv2.css"/>
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+    <script src="../js/echarts-3.3.2.js"></script>
+</head>
+<body>
+
+
+<div id="init-detail" style="display: none;" class="modal">
+
+    <div class="modal-header">初始化详情 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p style="margin-bottom:15px;">一旦启用订单数据初始化，系统以下模块的数据会被清除，请认真阅读，以免导致数据误删</p>
+
+        <table class="table-sub">
+            <tr>
+                <th></th>
+                <th>订单</th>
+                <th>资金管理</th>
+                <th>资金报表</th>
+                <th>库存管理</th>
+                <th>报表</th>
+                <th>消息</th>
+                <th>促销管理</th>
+            </tr>
+            <tr>
+                <td>模块</td>
+                <td>
+                    <p>订货单</p>
+                    <p>退货单</p>
+                    <p>出库发货记录</p>
+                    <p>订单产品统计</p>
+                </td>
+                <td>收货确认</td>
+                <td>
+                    <p>收支明细</p>
+                    <p>订单收款统计</p>
+                    <p>发货统计</p>
+                </td>
+                <td>
+                    <p>产品库存</p>
+                    <p>产品入库</p>
+                    <p>产品出库</p>
+                    <p>产品出入库明细</p>
+                </td>
+                <td>
+                    <p>订单统计报表</p>
+                    <p>地区统计报表</p>
+                    <p>产品销售报表</p>
+                    <p>客户订货报表</p>
+                </td>
+                <td>
+                    <p>业务消息</p>
+                </td>
+                <td>订单促销</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+</div>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">设置</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">系统设置</a></li>
+                <!--<li><i class="iconfont">&#xe60d;</i></li>-->
+
+                <!--<li><a href="">生成结算单</a></li>-->
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+<div class="sysItemGroup">
+    <div class="sysTitle">
+        <span class="star">*</span>订货方名称
+    </div>
+    <div class="sysContent">
+        <input type="text" placeholder="客户名称"/>
+    </div>
+</div>
+
+<div class="sysItemGroup">
+    <div class="sysTitle">
+        <span>系统初始化</span>
+    </div>
+
+    <div class="sysContent">
+        <p><input type="radio" name="init-radio">订单数据初始化</p>
+        <p class="p-sub">订货单、退货单以及订单相关收款记录、出库发货记录数据信息、促销、通知、消息均会清除 <a href="#init-detail" rel="modal:open" class="a-red">查看详情</a></p>
+        <p><input type="radio" name="init-radio">全部数据初始化</p>
+        <p class="p-sub">客户、员工账号及资金模块相关数据信息保留，其余数据信息均会清除 <a href="#init-detail" rel="modal:open" class="a-red">查看详情</a></p>
+        <a href="" class="a-btn-fill">立即初始化</a>
+    </div>
+
+    <!--<a href="#modal-invalid" rel="modal:open"><i class="iconfont">-->
+</div>
+
+<!--<div class="sysItemGroup">-->
+    <!--<div class="sysTitle">系统使用空间</div>-->
+    <!--<div class="sysContent ">-->
+
+
+        <!--<div class="echart-row">-->
+            <!--<div id="echart-1" >-->
+
+            <!--</div>-->
+
+            <!--<p style="padding-left:20px;">使用情况</p>-->
+            <!--<div class="echart-info">-->
+                <!--<div class="kind-title">产品图片及附件</div>-->
+                <!--<div class="kind-size">100M</div>-->
+            <!--</div>-->
+            <!--<div class="echart-info">-->
+                <!--<div class="kind-title">通知附件</div>-->
+                <!--<div class="kind-size">100M</div>-->
+            <!--</div>-->
+            <!--<div class="echart-info">-->
+                <!--<div class="kind-title">公告图片</div>-->
+                <!--<div class="kind-size">100M</div>-->
+            <!--</div>-->
+            <!--<div class="echart-info">-->
+                <!--<div class="kind-title">付款附件</div>-->
+                <!--<div class="kind-size">100M</div>-->
+            <!--</div>-->
+            <!--<div class="echart-info">-->
+                <!--<div class="kind-title">订/退单附件</div>-->
+                <!--<div class="kind-size">100M</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<script>
+    var myChart=echarts.init(document.getElementById('echart-1'));
+
+    var option = {
+        title : {
+            text: '某站点用户访问来源',
+            subtext: '纯属虚构',
+            x:'center',
+            show:false
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎'],
+            show:false
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '35%'],
+                data:[
+                    {value:335, name:'产品图片及附件'},
+                    {value:310, name:'通知附件'},
+                    {value:234, name:'广告图片'},
+                    {value:135, name:'付款附件'},
+                    {value:1548, name:'订/退单附件'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+
+</script>
+<div class="sysItemGroup">
+    <div class="sysTitle">订单设置</div>
+    <div class="sysContent">
+        <p><input type="checkbox"/>交货日期必填</p>
+    </div>
+</div>
+<div class="sysItemGroup">
+    <div class="sysTitle">产品设置</div>
+    <div class="sysContent">
+        <p><input type="checkbox"/>启用产品图片</p>
+        <p><input type="checkbox"/>启用产品起订量(起订量为0表示不限起订量)</p>
+        <p><input type="checkbox"/>启用产品限订量(起订量为0表示不限限订量)</p>
+        <p><input type="checkbox"/>启用产品品牌</p>
+        <p class="p-sub">启用产品品牌后，产品将增加品牌选择项，并且产品品牌将作为产品筛选条件</p>
+        <p><input type="checkbox"/>启用产品重量字段,并设置产品重量为: <input type="text" style="width:100px;"/></p>
+        <p class="p-sub">启用产品重量字段后，订单产品清单中将显示产品重量字段，且将按此字段计算合计总重量。</p>
+        <p><input type="checkbox"/>启用产品自定义字段</p>
+        <p class="p-sub">启用本功能后，所有产品均会增加自定义字段内容，最多支持10个自定义字段。</p>
+
+        <div class="customize-params">
+            <p>自定义字段名称</p>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <input style="display:block;" type="text" placeholder="请输入自定义字段名称"/>
+            <p>产品自定义字段在列表中显示宽度 <input type="text" style="width:100px;"> px </p>
+            <p>产品标签管理</p>
+            <p class="p-sub">管理您的产品标签,最多支持5个标签</p>
+            <p>
+                <input style="display:inline-block;width:100px;margin-right:10px;" type="text" value="新品上架">
+                <input style="display:inline-block;width:100px;margin-right:10px;" type="text" value="热卖推荐">
+                <input style="display:inline-block;width:100px;margin-right:10px;" type="text" value="清仓优惠">
+                <input style="display:inline-block;width:100px;margin-right:10px;" type="text" placeholder="添加新标签">
+                <input style="display:inline-block;width:100px;margin-right:10px;" type="text" placeholder="添加新标签">
+            </p>
+        </div>
+    </div>
+</div>
+<div class="sysItemGroup">
+    <div class="sysTitle">分享设置</div>
+    <div class="sysContent">
+        <p>通过山木通, 您可以把产品信息快速分享到新浪微博、微信好友、微信朋友圈…更仍让您的所
+            有产品以店铺形式展面展现。并且，分享中我们还支持加盟申请机制，帮您有效获取加盟信息，更好的获取商机。</p>
+        <p><input type="checkbox"/>启用客户产品分享</p>
+        <p><span class="p-title">联系方式</span> <input type="radio" name="share-radio"> 运行分享时自定义</p>
+        <p class="p-sub-2"><input type="radio" name="share-radio">统一指定联系信息</p>
+        <p class="p-sub-2">联系人&nbsp;&nbsp;&nbsp; <input type="text" value="深圳市莫亚科技有限公司"></p>
+        <p class="p-sub-2">联系电话 <input type="text"value="0731-8556 3963"></p>
+        <p><span class="p-title">产品价格</span> 市场价 x <input type="text"value="100%" style="width:80px;"> <input type="checkbox"/>不显示价格</p>
+        <p><span class="p-title">厂家名称</span> <input type="text" placeholder="请输入厂家名称"></p>
+        <p><span class="p-title">预览</span> <a href="" class="a-red" style="margin-left:0;">店铺预览</a></p>
+    </div>
+</div>
+<div class="sysItemGroup">
+    <div class="sysTitle">库存设置</div>
+    <div class="sysContent">
+        <div class="i-b col name">
+            <span>客户订货规则</span>
+            <div id="dateSelect" class="mySelect" style="width:200px;"><div class="show"><span class="data" val="year">按总仓库订购产品</span></div>
+                <ul class="ul-select">
+                    <li val="week">按总仓库订购产品</li>
+                    <li val="month">按客户对应仓库订购产品</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="p-sub-2">1.按总仓库订购产品：不限制仓库定向供货指定的客户</p>
+        <p class="p-sub-2">2.按客户对应仓库订购产品： 仓库定向供货给指定的客户，即客户只能订购对应仓库的产品。</p>
+        <div class="i-b col name">
+            <span>客户订货系统</span>
+            <div id="dateSelect" class="mySelect" style="width:200px;"><div class="show"><span class="data" val="year">不显示库存</span></div>
+                <ul class="ul-select">
+                    <li val="week">不显示库存</li>
+                    <li val="month">显示库存有无</li>
+                    <li val="month">显示库存数量</li>
+                </ul>
+            </div>
+        </div>
+        <p class="p-sub-2">1.不显示库存：仅用于公司内部库存管理，客户订货系统无库存功能</p>
+        <p class="p-sub-2">2.显示库存有无：客户可在产品、下单时显示产品库存有无，但不显示具体数量，未填库存信息显示无库存信息</p>
+        <p class="p-sub-2">3.显示库存数量：客户订货系统可在产品、下单时显示产品库存数量，未填库存信息显示无库存信息</p>
+        <p class="p-sub-2"><input type="checkbox"/>产品库存（扣减预购值）数量小于等于零，禁止订货</p>
+    </div>
+</div>
+<div class="sysItemGroup">
+    <div class="sysTitle">资金设置</div>
+    <div class="sysContent sysContent-cash">
+        <p>客户资金账户</p>
+        <p><input type="checkbox"/>启用 <input type="text" value="001"> <input type="text" value="预付款账户"> <input
+                type="checkbox"/>余额付款无需确认(此账户客户可充值,可用余额支付订单)</p>
+        <p><input type="checkbox"/>启用 <input type="text" value="002"> <input type="text" value="返点账户"> <input
+                type="checkbox"/>余额付款无需确认(此账户客户不可充值,可用余额支付订单)</p>
+        <p><input type="checkbox"/>启用 <input type="text" value="003"> <input type="text" value="保证金账户"> (此账户客户可充值,不可用余额支付订单)</p>
+    </div>
+</div>
+<div class="sysItemGroup">
+    <div class="sysTitle">客户设置</div>
+    <div class="sysContent">
+        <p><input type="checkbox"/>启用客户归属区域功能</p>
+        <p class="p-sub">关闭此功能后，您所定义的归属区域将被全部清除</p>
+    </div>
+</div>
+
+
+<div class="page-inner">
+    <div class="btns-div"><a class="a-btn-fill" style="float:left;margin-bottom:50px;">保存</a>
+    <!--<a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">取消</a>-->
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

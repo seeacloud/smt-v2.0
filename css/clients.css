@@ -1,0 +1,164 @@
+.table-client .th-name {
+  width: 50px; }
+.table-client .th-date {
+  width: 150px; }
+.table-client .th-chat {
+  text-align: left; }
+
+.a-btn-fill-mini {
+  height: 30px;
+  line-height: 30px; }
+
+.m-btn-gray {
+  color: #333 !important; }
+
+input.gender {
+  display: inline-block;
+  width: 20px; }
+
+.deal-mount {
+  text-align: center !important; }
+
+.client-info-wrap {
+  width: 500px; }
+
+.info-item {
+  padding: 15px 0 15px 5px;
+  color: #666; }
+  .info-item .info-title {
+    display: inline-block;
+    width: 80px; }
+  .info-item .info-content {
+    width: 300px;
+    display: inline-block; }
+  .info-item .info-date {
+    display: inline-block;
+    width: 110px;
+    float: right;
+    text-align: right; }
+
+.step-item {
+  text-align: center; }
+
+.step-group {
+  display: inline-block; }
+
+.step {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  padding-top: 30px;
+  width: 100px; }
+
+.step-person {
+  float: left; }
+
+.step:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #999;
+  position: absolute;
+  left: -50px;
+  top: 10px; }
+
+.step:after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #999;
+  border-radius: 50%;
+  top: 0;
+  left: 40px;
+  z-index: 10; }
+
+.step-active:after {
+  background: red; }
+
+.step-active:before {
+  background: red; }
+
+.first-step:before {
+  visibility: hidden; }
+
+.send-product-wrap {
+  padding: 10px; }
+
+.sp-item {
+  display: block;
+  position: relative;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+  height: 60px; }
+  .sp-item .sp-check {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0; }
+  .sp-item .img-wrap {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden; }
+    .sp-item .img-wrap img {
+      width: 100%; }
+  .sp-item .sp-info {
+    padding-top: 10px;
+    padding-left: 90px; }
+  .sp-item .sp-title {
+    font-size: 14px;
+    line-height: 14px;
+    overflow: hidden; }
+  .sp-item .sp-price {
+    color: red; }
+
+.sp-search {
+  background: #eee;
+  padding: 10px; }
+  .sp-search .a-btn-fill {
+    height: 30px;
+    padding: 0 20px; }
+  .sp-search input[type="text"] {
+    font-size: 12px;
+    width: 200px;
+    height: 30px; }
+
+.smt-btn, .send-btn {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  display: inline-block;
+  background: #DF3033;
+  color: #fff; }
+
+.smt-btn:hover, .send-btn:hover {
+  background: #a9263f; }
+
+.smt-btn:active, .send-btn:active {
+  background: #DF3033; }
+
+div {
+  font-size: 12px; }
+
+.send-btn {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  background: #DF3033;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0; }
+
+.smt-btn-gray {
+  background: #ddd;
+  color: #333; }
+
+/*# sourceMappingURL=clients.css.map */

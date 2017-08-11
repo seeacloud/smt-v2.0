@@ -1,0 +1,97 @@
+.sysItemGroup {
+  margin: 20px;
+  display: block;
+  position: relative; }
+  .sysItemGroup .sysTitle {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100px;
+    text-align: right;
+    top: 0;
+    left: 0;
+    background: #ddd;
+    height: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    color: #666; }
+  .sysItemGroup .sysTitle:after {
+    content: '';
+    display: block;
+    clear: both; }
+  .sysItemGroup .sysContent {
+    padding-left: 120px;
+    background: #fff; }
+    .sysItemGroup .sysContent input[type='text'] {
+      font-size: 12px;
+      width: 400px;
+      margin-top: 5px; }
+    .sysItemGroup .sysContent input[type='radio'] {
+      margin-right: 5px; }
+    .sysItemGroup .sysContent input[type='checkbox'] {
+      margin-right: 5px; }
+    .sysItemGroup .sysContent p {
+      line-height: 36px;
+      font-size: 12px; }
+      .sysItemGroup .sysContent p .p-title {
+        width: 75px;
+        display: inline-block; }
+    .sysItemGroup .sysContent .p-sub {
+      padding-left: 15px;
+      color: #999; }
+    .sysItemGroup .sysContent .p-sub-2 {
+      padding-left: 80px; }
+    .sysItemGroup .sysContent a {
+      margin-left: 15px;
+      margin-top: 10px; }
+
+.sysItemGroup:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.sysContent-cash p input[type='text'] {
+  width: 80px !important;
+  margin-right: 10px; }
+
+.i-b {
+  margin: 10px 0; }
+  .i-b span {
+    font-size: 12px; }
+  .i-b li {
+    font-size: 12px; }
+
+.modal {
+  max-width: 800px; }
+
+#init-detail {
+  width: 800px !important; }
+  #init-detail td p {
+    line-height: 24px; }
+
+.echart-row {
+  display: block;
+  position: relative;
+  padding-left: 520px;
+  float: left;
+  height: 300px;
+  padding-top: 20px; }
+  .echart-row #echart-1 {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .echart-row .echart-info {
+    font-size: 12px;
+    margin-bottom: 15px; }
+    .echart-row .echart-info .kind-title {
+      display: inline-block;
+      width: 200px;
+      padding-left: 20px; }
+    .echart-row .echart-info .kind-size {
+      text-align: right;
+      display: inline-block; }
+
+/*# sourceMappingURL=sysStyle.css.map */

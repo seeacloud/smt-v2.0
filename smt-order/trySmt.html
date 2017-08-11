@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>体验山木通</title>
+    <script src="../js/jquery1.12.1.min.js"></script>
+
+    <style>
+
+        body, p, h1, h2, h3, h4, h5, div, a, ul, li {
+            font-family: Tahoma, "Microsoft YaHei", "微软雅黑", "黑体", "宋体", sans-serif;
+        }
+
+        body {
+            background: #eeeeee;
+        }
+
+        .try-panel {
+            width: 80%;
+            margin-left: 10%;
+            margin-top: 100px;
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            display: block;
+            float: left;
+            margin-bottom: 100px;
+            min-width: 1000px;
+        }
+
+        .sub-panel {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }
+
+        .sub-panel-inner {
+            padding: 50px;
+            padding-bottom: 100px;
+        }
+
+        .sec {
+            display: block;
+        }
+
+        .sec-logo {
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 50px;
+        }
+
+        .sec-logo:after {
+            display: block;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .logo {
+            display: inline-block;
+            width: 50px;
+            border-right: 1px solid #dddddd;
+            padding-right: 20px;
+            float: left;
+        }
+
+        .logo img {
+            width: 50px;
+            display: inline-block;
+            float: left;
+        }
+
+        .slogan {
+            display: inline-block;
+            float: left;
+            padding-left: 20px;
+        }
+
+        .slogan:after {
+            content: '';
+            clear: both;
+            display: block;
+            visibility: hidden;
+        }
+
+        .slogan h2 {
+            margin: 0;
+            line-height: 50px;
+            color: #a9263f;
+        }
+
+        .sec p {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            color: #333333;
+            margin: 0;
+        }
+
+        .sec h3 {
+            text-align: center;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .sec h4 {
+            text-align: center;
+            color: #666666;
+            font-size: 20px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .code {
+            /*width: 50%;*/
+            width: 100%;
+            background: none;
+            display: block;
+            text-align: center;
+            float: left;
+        }
+
+        .code img {
+            width: 30%;
+            display: inline-block;
+        }
+
+        .sec-input {
+            text-align: center;
+        }
+
+        .sec-input input[type="text"] {
+            display: inline-block;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            margin-top: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+            color: red;
+            min-width: 350px;
+            text-align: center;
+        }
+
+        .try-btn {
+            display: inline-block;
+            text-decoration: none;
+            width: 50%;
+            height: 50px;
+            text-align: center;
+            background: red;
+            color: #ffffff;
+            line-height: 50px;
+            margin-top: 20px;
+            min-width: 354px;
+            cursor: pointer;
+        }
+
+        .sec-input .try-btn:hover {
+            background: #a9263f;
+        }
+
+        .sec-input .try-btn:active {
+            background: red;
+        }
+
+        .smt-edition {
+            width: 50%;
+            display: inline-block;
+            margin-top: 20px;
+            min-width: 354px;
+        }
+
+        .edition-tag {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }
+
+        .tag-inner {
+            border: 1px solid #dddddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tag-active {
+            border: 1px solid red;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="try-panel">
+
+    <div class="sub-panel">
+        <div class="sub-panel-inner" style="padding-right:0;">
+            <div class="sub-panel-content-wrap" style="border-right:1px solid #dddddd;padding-right:50px;">
+                <div class="sec sec-logo">
+                    <div class="logo">
+                        <img src="../img/smt-app-logo.png" alt="">
+
+                    </div>
+
+                    <div class="slogan">
+                        <h2>山木通, 让管理更轻松</h2>
+                    </div>
+                </div>
+                <div style="color:#ffffff;">.</div>
+
+                <div class="sec">
+                    <p >体验山木通</p>
+                    <h3>移动端</h3>
+                    <h4>经营状况随时掌控,运筹帷幄,决胜千里!</h4>
+                </div>
+                <div class="sec" style="margin-top:50px;">
+
+
+                    <div class="code">
+                        <img src="../img/smt-android.png" alt=""/>
+                        <p style="font-size:14px;">扫码下载山木通安卓APP</p>
+                    </div>
+                </div>
+                <div class="sec" style="clear:both;padding-bottom:50px;"></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="sub-panel">
+
+        <div class="sub-panel-inner">
+            <div class="sec sec-logo"></div>
+            <div style="color:#ffffff;">.</div>
+
+            <div class="sec">
+                <p >体验山木通</p>
+                <h3>电脑端</h3>
+                <h4>功能强大, 管理企业得心应手!</h4>
+            </div>
+            <div class="sec sec-input">
+                <div class="info-content-wrap" id="info-content"><input type="text" placeholder="请输入您的电话号码">
+                    <div class="smt-edition">
+                        <div class="edition-tag">
+                            <div class="tag-inner tag-active" style="margin-right:10px;">
+                                山木通门店版
+                            </div>
+                        </div>
+                        <div class="edition-tag">
+                            <div class="tag-inner" style="margin-left:10px;">
+                                山木通厂家版
+                            </div>
+                        </div>
+                    </div>
+                    <div class="try-btn"  id="try-btn">立即体验</div>
+                </div>
+            </div>
+
+            <div class="code" style="display:none;" id="wx-code">
+                <img src="../img/smt-wx.jpg" alt="" style="margin-top:40px;">
+                <p style="font-size:14px;">扫码关注微信公众号,开始体验山木通!</p>
+                <a class="try-btn"  href="">开始体验</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $('.tag-inner').on('click', function () {
+            $('.tag-inner').removeClass('tag-active');
+            $(this).addClass('tag-active');
+        });
+
+        $('#try-btn').on('click', function () {
+            $('#info-content').hide();
+            $('#wx-code').show();
+        });
+    });
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

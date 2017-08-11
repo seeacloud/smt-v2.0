@@ -1,0 +1,42 @@
+$mred:#a9263f;
+$darkred:#812839;
+$black:#333;
+$gray:#666;
+$lightgray:#999;
+$lightred:#DF3033;
+
+$bdrcolor:#ddd;
+
+$lightgreen:#E6FFE6;
+$lighterred:#F6C1C2;
+
+
+table.pay-record-table
+{
+  tr
+  {
+    td
+    {
+      vertical-align: top;
+
+      h5
+      {
+        text-align: left;
+      }
+    }
+    .td-img
+    {
+      image
+      {
+        width: 60px !important;
+        height: 60px !important;
+      }
+
+    }
+
+  }
+}
+.money
+{
+  color: $lightred;
+}

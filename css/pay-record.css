@@ -1,0 +1,12 @@
+table.pay-record-table tr td {
+  vertical-align: top; }
+  table.pay-record-table tr td h5 {
+    text-align: left; }
+table.pay-record-table tr .td-img image {
+  width: 60px !important;
+  height: 60px !important; }
+
+.money {
+  color: #DF3033; }
+
+/*# sourceMappingURL=pay-record.css.map */

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>productList</title>
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/jquery.modal.css">
+    <script src="../js/jquery1.12.1.min.js"></script>
+    <script src="../js/jquery.modal.js"></script>
+</head>
+<body>
+
+
+
+
+<link rel="stylesheet" href="../css/jquery.modal.css">
+<script src="../js/jquery1.12.1.min.js"></script>
+<script src="../js/jquery.modal.js"></script>
+
+<div id="modal-align-center" style="display: none;">
+
+    <div class="modal-header">删除产品 <div><i class="iconfont">&#xe615;</i></div></div>
+    <div class="modal-inner">
+        <p>确认删除该产品? 本操作不可恢复!</p>
+        
+    </div>
+
+    <div class="btns-div">
+        <a href="javascript:void(0);" class="a-btn-fill "> 确认</a>
+        <a href="javascript:void(0);" rel="modal:close" class="a-btn-fill btn-gray"> 取消</a>
+    </div>
+
+
+</div>
+
+<!--<p><a href="#modal-align-center" rel="modal:open">open modal</a></p>-->
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <div class="nav-item" data-content=""><i class="iconfont">&#xe606;</i></div>
+            <div class="nav-item" data-content="">产品管理</div>
+            <div class="nav-item nav-item-active" data-content="">产品列表</div>
+            <!--<div class="nav-item nav-item-active" data-content="">新增产品</div>-->
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+<div class="pageHeader">
+    <div class="headerleft"><span>筛选</span>
+        <select name="itemNum">
+            <option value="10">全部类别</option>
+            <option value="20">扶梯</option>
+            <option value="50">沙发</option>
+            <option value="100">书桌</option>
+        </select>
+    <span>排序</span>
+        <select name="itemNum">
+            <option value="10">下单时间</option>
+            <option value="20">成本价</option>
+            <option value="50">库存数量</option>
+        </select>
+
+        <span>标签</span>
+        <select name="itemNum">
+            <option value="10">促销</option>
+            <option value="20">特价</option>
+            <option value="50">缺货</option>
+        </select>
+        <span>仓库</span>
+        <select name="itemNum">
+            <option value="10">1号仓库</option>
+            <option value="20">2号仓库</option>
+            <option value="50">3号仓库</option>
+        </select>
+
+    </div>
+    <div class="headerright">
+        <a href="" class="a-red"><i class="iconfont">&#xe612;</i>导入</a>
+        <a href="addProduct.html" target="myiframe" class="a-btn-fill right-margin-0">增加产品</a>
+    </div>
+</div>
+
+<div class="tableWrap">
+    <table class="align-top product-list-table">
+        <tr>
+            <th class="align-left"><input type="checkbox"></th>
+            <th class="pname">产品名称</th>
+            <th>单位</th>
+            <th>市场价</th>
+            <th>成本价</th>
+            <!--<th>预购</th>-->
+            <th>库存数量</th>
+            <!--<th>库存成本</th>-->
+            <th>状态</th>
+            <th class="action">操作</th>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="pname"><img src="../img/wood.png" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木<span class="sale">特价促销</span></li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+            <td>立方</td>
+            <td class="">￥1888</td>
+            <td class="">￥1288</td>
+            <!--<td>100</td>-->
+            <td>30000</td>
+            <!--<td>0</td>-->
+            <td>上架</td>
+            <td>
+                <a href="productDetail.html" target="myiframe">详情</a><br>
+                <a href="">修改</a><br>
+                <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td class="pname"><img src="../img/s-1.jpg" alt="">
+                <div class="product-info">
+                    <ul>
+                        <li>产品名称:白橡木</li>
+                        <li>产品编码:xm20093</li>
+                        <li>喷漆颜色:红色,白色,透明</li>
+                        <li>订货周期:12天</li>
+                    </ul>
+                </div></td>
+
+            <td>立方</td>
+            <td class="">￥1888</td>
+            <td class="">￥1288</td>
+            <!--<td>100</td>-->
+            <td>30000</td>
+            <!--<td>0</td>-->
+            <td>上架</td>
+            <td>
+                <a href="productDetail.html" target="myiframe">详情</a><br>
+                <a href="">修改</a><br>
+                <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+            </td>
+        </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-2.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-3.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-4.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-5.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-6.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木<span class="sale">新品上市</span></li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天 </li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-7.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-8.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木<span class="sale">团购</span></li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天 </li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr><tr>
+        <td><input type="checkbox"></td>
+        <td class="pname"><img src="../img/s-9.jpg" alt="">
+            <div class="product-info">
+                <ul>
+                    <li>产品名称:白橡木</li>
+                    <li>产品编码:xm20093</li>
+                    <li>喷漆颜色:红色,白色,透明</li>
+                    <li>订货周期:12天</li>
+                </ul>
+            </div></td>
+
+        <td>立方</td>
+        <td class="">￥1888</td>
+        <td class="">￥1288</td>
+        <!--<td>100</td>-->
+        <td>30000</td>
+        <!--<td>0</td>-->
+        <td>上架</td>
+        <td>
+            <a href="productDetail.html" target="myiframe">详情</a><br>
+            <a href="">修改</a><br>
+            <a href="#modal-align-center" rel="modal:open">删除</a><br><a href="standardBom.html" target="myiframe">标准物料</a>
+        </td>
+    </tr>
+
+
+
+    </table>
+
+    <div class="pagefooter">
+        <div class="footerleft"><input type="checkbox">
+            <a href="" class="a-red">批量审核</a></div>
+        <div class="footerright">
+            <div class="pager">
+                共计
+                <span class="total">20</span>条 每页显示
+
+                    <select name="itemNum">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+
+
+                条 第 <input type="text" placeholder="1">页
+                共 <span class="totalPage">2</span>页
+                <a href="" class="a-btn"><i class="iconfont">&#xe60e;</i></a>
+                <a href="" class="a-btn"><i class="iconfont">&#xe60d;</i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

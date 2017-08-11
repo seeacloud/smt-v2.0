@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加生产单</title>
+
+    <link rel="stylesheet" href="../css/smt-style.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+
+
+</head>
+<body>
+
+
+<div class="topNav">
+    <div class="topbar">
+        <p>汉瑞木业有限公司</p>
+
+        <ul>
+            <li><a href="../smt-agent/index.html" target="_parent">[切换到代理商]</a></li>
+
+            <li><a href="">用户</a></li>
+            <li><a href="">消息</a></li>
+            <li><a href="">帮助</a></li>
+            <li id="setting-btn"><a href="">设置 <i class="iconfont">&#xe610;</i></a></li>
+        </ul>
+
+        <div class="setting-popup" id="setting-popup" style="display:none;">
+            <ul>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+                <li><a href="">设置条目...</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="nav">
+        <div class="navlistWrap">
+
+            <!--重要导航样式 勿删-->
+            <!--<div class="nav-item nav-item-active" data-content=""><i class="iconfont">&#xe606;</i></div>-->
+            <!--<div class="nav-item nav-item-active" data-content="">首页</div>-->
+
+            <!--<div class="nav-item" data-content="">产品管理</div>-->
+            <!--<div class="nav-item" data-content="">产品列表</div>-->
+            <!--<div class="nav-item " data-content="">新增产品</div>-->
+
+            <ul>
+                <li><a href="">首页</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+                <li><a href="">生产管理</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">生产单列表</a></li>
+                <li><i class="iconfont">&#xe60d;</i></li>
+
+                <li><a href="">增加生产单</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="search-group">
+        <a href=""><span>高级</br>搜索</span></a>
+        <i class="iconfont">&#xe60c;</i>
+        <input type="text" placeholder="请输入搜索关键字">
+    </div>
+</div>
+
+<!--content start-->
+
+
+<div class="page-inner">
+
+    <h5 class="font-bold">基本信息</h5>
+    <br>
+    <div class="input-inline-div">
+        <span>生产单号: <input type="text"></span> <span>客户名称: <input type="text" style="width: 200px;"></span>
+        <span><span class="star">*</span>生产工厂</span>
+        <div class="selectWrap"><select name="" id="" >
+        <option value="A工厂">A工厂</option>
+        <option value="B工厂">B工厂</option>
+    </select></div>
+    </div>
+</div>
+
+<div class="tableWrap">
+    <table class="table-sub">
+        <tr>
+            <th>序号</th>
+            <th>产品</th>
+            <th>单位</th>
+            <th>数量</th>
+            <th class="align-center">备注</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><div class="input-group" id="" style="width: 100%;"><input type="text" placeholder="请输入产品信息..." style="width: 100%;">
+                <span class="more" >&middot;&middot;&middot;</span></div>
+            </td>
+            
+            <td>件</td>
+            <td><input type="text" ></td>
+            <td><input type="text" style="margin-right:0;"></td>
+        </tr>
+    </table>
+</div>
+
+<div class="page-inner">
+    <br>
+    <h5 class="font-bold">个性信息</h5>
+    <br>
+
+    <textarea name="" id="" cols="30" rows="6" style="width:100%;"></textarea>
+</div>
+
+<div class="tableWrap">
+    <br>
+    <h5 class="font-bold">物料清单</h5>
+    <table class="table-sub">
+        <tr>
+            <th>序号</th>
+            <th></th>
+            <th>物料名称</th>
+            <th>单位</th>
+            <th>规格</th>
+            <th>订单数量</th>
+            <th>库存数量</th>
+            <th>本次生产数量</th>
+            <th class="align-center">备注</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>+ -</td>
+            <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+            <td>只</td>
+            <td>800*600</td>
+            <td>55</td>
+            <td>10000</td>
+            <td><input type="text"></td>
+            <td><input type="text" class="push-right"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>+ -</td>
+            <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+            <td>只</td>
+            <td>800*600</td>
+            <td>55</td>
+            <td>10000</td>
+            <td><input type="text"></td>
+            <td><input type="text" class="push-right"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>+ -</td>
+            <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+            <td>只</td>
+            <td>800*600</td>
+            <td>55</td>
+            <td>10000</td>
+            <td><input type="text"></td>
+            <td><input type="text" class="push-right"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+        <td>+ -</td>
+        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+        <td>只</td>
+        <td>800*600</td>
+        <td>55</td>
+        <td>10000</td>
+        <td><input type="text"></td>
+        <td><input type="text" class="push-right"></td>
+    </tr>
+        <tr>
+            <td>5</td>
+            <td>+ -</td>
+            <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+            <td>只</td>
+            <td>800*600</td>
+            <td>55</td>
+            <td>10000</td>
+            <td><input type="text"></td>
+            <td><input type="text" class="push-right"></td>
+        </tr>
+        <tr>
+        <td>6</td>
+        <td>+ -</td>
+        <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+        <td>只</td>
+        <td>800*600</td>
+        <td>55</td>
+        <td>10000</td>
+        <td><input type="text"></td>
+        <td><input type="text" class="push-right"></td>
+    </tr>
+        <tr>
+            <td>7</td>
+            <td>+ -</td>
+            <td style="text-align:left;"><input type="text" placeholder="调用柱子控件" style="margin-left: 0"></td>
+            <td>只</td>
+            <td>800*600</td>
+            <td>55</td>
+            <td>10000</td>
+            <td><input type="text"></td>
+            <td><input type="text" class="push-right"></td>
+        </tr>
+
+
+
+
+
+    </table>
+</div>
+
+<div class="page-inner">
+    <div class="btns-div"><a class="a-btn-fill">保存</a>
+    <a href="javascript:history.back(-1);" class="a-btn-fill btn-gray">取消</a></div>
+</div>
+</body>
+</html>

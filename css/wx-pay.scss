@@ -1,0 +1,224 @@
+
+.wx-pay-wrap
+{
+  display: block;
+  width:100%;
+}
+.weixin-pay-panel
+{
+  display:block;
+  width:400px;
+  border-radius: 10px;
+  border:1px solid #ddd;
+  overflow: hidden;
+  background: #fff;
+  margin:40px auto;
+
+  .wx-pay-title
+  {
+    padding:10px;
+    text-align: center;
+    img
+    {
+      display: inline-block;
+
+      margin:0 auto;
+    }
+  }
+  .wx-pay-content
+  {
+    background: #48B826;
+    text-align: center;
+    padding-bottom:20px;
+  }
+  .welcome
+  {
+    font-size:16px;
+    display: inline-block;
+    background: #fff;
+    padding:0 10px;
+    margin:20px 0;
+    height:30px;
+    line-height:30px;
+    border-radius: 15px;
+  }
+  .wx-info
+  {
+    padding:15px 0 5px 0;
+    width:200px;
+    border-bottom:1px dashed #fff;
+    width:180px;
+    margin:0 auto;
+    color: #fff;
+
+  }
+
+  .wx-icons
+  {
+    display: inline-block;
+    margin:0 auto;
+    width:210px;
+
+    .icon-item
+    {
+      width:70px;
+      display: inline-block;
+      float: left;
+      img
+      {
+        width:30px;
+      }
+    }
+  }
+
+  .step-num
+  {
+    color:#48B826;
+    display: inline-block;
+    margin:10px auto;
+    width:20px;
+    height:20px;
+    background: #fff;
+    border-radius: 50%;
+    font-size:12px;
+    text-align: center;
+    line-height:20px;
+
+  }
+
+  .wx-txt
+  {
+    font-size:10px;
+    color: #fff;
+    padding:5px;
+    text-align: left;
+  }
+}
+
+.price-card
+{
+  font-size:12px;
+  border:2px solid #ddd;
+  display: inline-block;
+  padding:20px;
+  color: #999;
+  margin:20px 20px 20px 0;
+  cursor: pointer;
+  .price
+  {
+    font-size:40px;
+    color: #999;
+    .unit-year
+    {
+      font-size:12px;
+    }
+  }
+}
+.price-card:hover
+{
+  border-color:#DF3033;
+  color: #666;
+  .price
+  {
+    color: #DF3033;
+  }
+}
+
+.price-card-active
+{
+  border-color:#DF3033;
+  color: #666;
+  .price
+  {
+    color: #DF3033;
+  }
+}
+
+
+
+.buy-row-div
+{
+  padding:10px 0;
+  div
+  {
+    display: inline-block;
+  }
+  .year
+  {
+    border:1px solid #ddd;
+    padding:5px 15px;
+    display: inline-block;
+    margin: 10px;
+  }
+  .year:hover
+  {
+    border-color:#DF3033;
+    color: #DF3033;
+    cursor: pointer;
+  }
+  .year-active
+  {
+    border-color:#DF3033;
+    color: #DF3033;
+  }
+
+  .pay-money
+  {
+    font-size:20px;
+    color: #DF3033;
+  }
+
+  label
+  {
+    margin-right:20px;
+  }
+  .a-btn-fill
+  {
+    margin:10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
